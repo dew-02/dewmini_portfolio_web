@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function Projects() {
   const projects = [
@@ -28,14 +29,24 @@ export default function Projects() {
   return (
     <section id="projects" className="bg-pink-50 py-20">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">
+        <motion.h2
+          initial={{ opacity: 0, y: -40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-4xl font-bold text-center mb-12"
+        >
           My Projects
-        </h2>
+        </motion.h2>
 
         <div className="grid md:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div
+            <motion.div
               key={index}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              viewport={{ once: true }}
               className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition duration-300"
             >
               <h3 className="text-xl font-semibold mb-3">
@@ -51,6 +62,7 @@ export default function Projects() {
                   href={project.github}
                   className="text-blue-600 font-medium hover:underline"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   GitHub →
                 </a>
@@ -59,11 +71,12 @@ export default function Projects() {
                   href={project.live}
                   className="text-green-600 font-medium hover:underline"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Live Demo →
                 </a>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
