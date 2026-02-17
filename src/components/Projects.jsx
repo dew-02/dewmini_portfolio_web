@@ -3,14 +3,14 @@ import React from "react";
 export default function Projects() {
   const projects = [
     {
-      title: "Re-Good – Online Resale Platform",
+      title: "Crop Management System",
       description:
         "Full-stack MERN web application for buying and selling used products with price negotiation and secure payments.",
       github: "https://github.com/dew-02/Suhuru-Waga-System.git",
       live: "#",
     },
     {
-      title: "Agro Management System",
+      title: "Online Medical Portal",
       description:
         "Web platform built using MERN stack to manage sustainable agriculture activities with user-friendly dashboards.",
       github: "https://github.com/dew-02/online-medical-portal.git",
@@ -26,7 +26,7 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="bg-gray-50 py-20">
+    <section id="projects" className="bg-pink-50 py-20">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12">
           My Projects
