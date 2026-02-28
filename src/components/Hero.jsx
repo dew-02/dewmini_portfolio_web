@@ -15,7 +15,8 @@ export default function Hero() {
           <div className="flex-1 text-center lg:text-left">
 
             <h1 className="text-5xl md:text-4xl lg:text-5xl font-black text-white tracking-tighter mb-4 leading-tight">
-              Hi !  I’m <span className="text-accent">Dewmini Jayasinghe</span>
+              Hi !   I’m <br></br>
+              Dewmini Jayasinghe<span className="text-accent"></span>
             </h1>
 
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-purple-500 mb-6">
