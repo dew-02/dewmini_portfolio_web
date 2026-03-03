@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import uniImg from "../assets/uni.png";
 import schoolImg from "../assets/school.jpg";
-import companyImg from "../assets/openuni.png"; // your internship logo
+import companyImg from "../assets/openuni.png";
 
 export default function About() {
   return (
@@ -18,10 +18,17 @@ export default function About() {
         >
           <h2 className="text-4xl font-bold mb-6">About Me</h2>
 
-          <p className="text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            I’m Dewmini Jayasinghe, an aspiring Full-Stack Developer passionate
+          <h2 className="text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            An aspiring Full-Stack Developer passionate
             about building scalable, clean, and modern web applications.
             I enjoy transforming ideas into efficient and user-friendly solutions.
+          </h2>
+
+          <br />
+
+          <p className="text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            I'm <span className="text-blue-400 font-semibold">Dewmini Chalakshana</span>, a{" "}
+            <span className="text-blue-400 font-semibold">BSc in Information Technology student</span> at SLIIT passionate about creating elegant solutions and building modern web applications while continuously growing my skills.
           </p>
         </motion.div>
 
@@ -37,27 +44,57 @@ export default function About() {
             My Journey
           </h2>
 
-          <div className="space-y-6 text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            <p>
-              My journey into technology began with curiosity about how systems
-              and websites work. That curiosity became passion as I started building
-              real-world projects and improving my technical skills.
-            </p>
+          {/* 🔵 BOX ADDED HERE */}
+          <div className="bg-[#111827] border border-blue-500/20 rounded-2xl p-8 shadow-lg max-w-4xl mx-auto hover:shadow-blue-500/30 transition-all duration-300">
 
-            <p>
-              Through university and self-learning, I have strengthened my
-              foundation in software engineering, databases, networking,
-              and cloud technologies.
-            </p>
+            <div className="space-y-6 text-gray-300 leading-relaxed">
+              <p>
+                Hello! I'm Dewmini Chalakshana, also known as MrRandiv in the developer community. I'm a{" "}
+                <span className="text-blue-400 font-semibold">
+                  BSc in Information Technology student
+                </span>{" "}
+                at Sri Lanka Institute of Information Technology (SLIIT), passionate about full-stack web development and DevOps practices.
+              </p>
 
-            <p>
-              My goal is to become a skilled software engineer who builds
-              scalable systems with clean architecture and efficient deployment workflows.
-            </p>
+              <p>
+                My journey into software development started with curiosity about how web applications work. Through coursework and hands-on projects, I've built over{" "}
+                <span className="text-blue-400 font-semibold">
+                  10 functional web applications
+                </span>
+                , ranging from e-commerce platforms to real-time collaboration tools. Each project has been a learning opportunity that has shaped my understanding of modern development practices.
+              </p>
+
+              <p>
+                I specialize in the{" "}
+                <span className="text-blue-400 font-semibold">
+                  MERN stack
+                </span>{" "}
+                (MongoDB, Express.js, React.js, Node.js) and am actively exploring{" "}
+                <span className="text-blue-400 font-semibold">
+                  DevOps tools and methodologies
+                </span>{" "}
+                including Docker, CI/CD pipelines, and deployment automation. I believe in writing clean, maintainable code and following industry best practices.
+              </p>
+
+              <p>
+                I'm eager to apply my knowledge in professional settings, contribute to real-world projects, and continue growing as a developer. I stay up-to-date with emerging technologies through online courses, documentation, and hands-on experimentation.
+              </p>
+
+              <p>
+                Outside of coding, I explore new frameworks, contribute to open-source when possible, and collaborate on exciting opportunities. I'm currently seeking{" "}
+                <span className="text-blue-400 font-semibold">
+                  internship opportunities
+                </span>{" "}
+                where I can learn from experienced developers and contribute to meaningful projects.
+              </p>
+            </div>
+
           </div>
         </motion.div>
 
         {/* ================= EDUCATION & EXPERIENCE ================= */}
+        {/* (UNCHANGED — Your Existing Code Below) */}
+
         <motion.div
           className="mt-24"
           initial={{ opacity: 0, y: 60 }}
@@ -71,13 +108,12 @@ export default function About() {
 
           <div className="grid md:grid-cols-2 gap-12">
 
-            {/* ================= LEFT SIDE - EDUCATION ================= */}
+            {/* LEFT SIDE - EDUCATION */}
             <div>
               <h3 className="text-2xl font-semibold mb-6 text-blue-400">
                 Education
               </h3>
 
-              {/* University Card */}
               <div className="bg-[#111827] border-l-4 border-blue-500 rounded-xl p-6 shadow-lg relative 
                               hover:shadow-blue-500/40 hover:-translate-y-2 
                               transition-all duration-300 cursor-pointer mb-8">
@@ -108,7 +144,6 @@ export default function About() {
                 </p>
               </div>
 
-              {/* School Card */}
               <div className="bg-[#111827] border-l-4 border-purple-500 rounded-xl p-6 shadow-lg 
                               hover:shadow-purple-500/40 hover:-translate-y-2 
                               transition-all duration-300 cursor-pointer">
@@ -133,13 +168,12 @@ export default function About() {
               </div>
             </div>
 
-            {/* ================= RIGHT SIDE - EXPERIENCE ================= */}
+            {/* RIGHT SIDE - EXPERIENCE */}
             <div>
               <h3 className="text-2xl font-semibold mb-6 text-green-400">
                 Experience
               </h3>
 
-              {/* Internship Card */}
               <div className="bg-[#111827] border-l-4 border-green-500 rounded-xl p-6 shadow-lg relative 
                               hover:shadow-green-500/40 hover:-translate-y-2 
                               transition-all duration-300 cursor-pointer">
