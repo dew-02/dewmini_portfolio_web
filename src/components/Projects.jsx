@@ -3,35 +3,54 @@ import bgImage from "../assets/projects.jpg";
 import project1 from "../assets/project1.png";
 import project2 from "../assets/project2.jpeg";
 import project3 from "../assets/project3.png";
+import project4 from "../assets/project4.jpg";
 
 import { FaGithub } from "react-icons/fa";
 
 export default function Projects() {
   const projects = [
     {
-      title: "Wild Lanka",
+      title: "Crop Management System",
       image: project1,
       description:
-        "Tourism web application built using React and Tailwind CSS with interactive UI and responsive design.",
-      github: "https://github.com/dew-02/project1",
-      tech: ["React", "Tailwind CSS", "Node.js"],
+        "Full-stack MERN web application for buying and selling used products with price negotiation and secure payments. web application built using React and Tailwind CSS with interactive UI and responsive design.",
+      github: "https://github.com/dew-02/Suhuru-Waga-System.git",
+      tech: ["JavaScript", "CSS", "HTML"],
     },
     {
-      title: "Medico 360",
+      title: "Online Medical Portal",
       image: project2,
       description:
         "Online medical portal designed to manage patient services and appointments with clean dashboard interface.",
-      github: "https://github.com/yourusername/project2",
-      tech: ["HTML", "CSS", "JavaScript"],
+      github: "https://github.com/dew-02/online-medical-portal.git",
+      tech: ["PHP", "CSS", "JavaScript","Hack"],
     },
     {
-      title: "ReGoods",
+      title: "Wellness Tracker",
       image: project3,
       description:
-        "Sustainable product exchange platform focused on eco-friendly trading using modern web technologies.",
-      github: "https://github.com/yourusername/project3",
-      tech: ["React", "Firebase"],
+        "Mobile app developed in Kotlin to track daily habits, health activities, and personal wellness goals.",
+      github: "https://github.com/dew-02/wellness-tracker-app.git",
+      tech: ["Kotlin"],
     },
+
+{
+      title: "Learn Languages",
+      image: project4,
+      description:
+        "Online medical portal designed to manage patient services and appointments with clean dashboard interface.",
+      github: "https://github.com/dew-02/learn-languages-app-mad_lab_exam_2.git",
+      tech: ["Kotlin"],
+    },
+
+
+
+
+
+
+
+
+
   ];
 
   return (

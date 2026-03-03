@@ -22,8 +22,7 @@ export default function Contact() {
             Get In Touch
           </h2>
           <p className="text-lg text-gray-300">
-            Have a project in mind or just want to chat? I'd love to hear from you.
-          </p>
+I'm always open to new opportunities and collaborations. Whether you have a specific project in mind or just want to chat about technology, feel free to reach out.          </p>
         </div>
       </div>
 

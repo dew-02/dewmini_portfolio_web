@@ -16,7 +16,7 @@ export default function Hero() {
 
             <h1 className="text-5xl md:text-4xl lg:text-5xl font-black text-white tracking-tighter mb-4 leading-tight">
               Hi !   I’m <br></br>
-              Dewmini Jayasinghe<span className="text-accent"></span>
+              Dewmini <span className="text-accent"></span>
             </h1>
 
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-purple-500 mb-6">
@@ -55,7 +55,7 @@ export default function Hero() {
                 </a>
 
                 <a
-                  href="https://www.linkedin.com/in/dewmini/"
+                  href="https://www.linkedin.com/in/dewmini-jayasinghe-b9308b31a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 text-gray-400 hover:text-blue-400 hover:border-blue-400 hover:bg-blue-400/10 transition-all duration-300 hover:scale-110"
