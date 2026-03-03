@@ -1,6 +1,14 @@
 import React from "react";
 import bgImage from "../assets/contat.webp";
-import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
+  FaInstagram,
+  FaFacebook,
+} from "react-icons/fa";
 
 export default function Contact() {
   return (
@@ -22,114 +30,124 @@ export default function Contact() {
             Get In Touch
           </h2>
           <p className="text-lg text-gray-300">
-I'm always open to new opportunities and collaborations. Whether you have a specific project in mind or just want to chat about technology, feel free to reach out.          </p>
+            I'm always open to new opportunities and collaborations.
+            Whether you have a specific project in mind or just want to chat about technology,
+            feel free to reach out.
+          </p>
         </div>
       </div>
 
       {/* ================= CONTACT CONTENT ================= */}
       <div className="bg-[#0f172a] py-20">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+        <div className="max-w-5xl mx-auto px-6 space-y-10">
 
-          {/* ===== LEFT: CONTACT FORM ===== */}
+          {/* Contact Information Box */}
           <div className="bg-[#111827] p-8 rounded-xl shadow-lg">
             <h3 className="text-2xl font-semibold text-white mb-6">
-              Send Me a Message
+              Contact Information
             </h3>
 
-            <form className="space-y-5">
+            <div className="space-y-5 text-gray-300">
 
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="w-full p-3 bg-gray-800 text-white rounded-md outline-none focus:ring-2 focus:ring-blue-500"
-              />
+              <div className="flex items-center gap-3">
+                <FaEnvelope className="text-blue-400" />
+                <span>dewminichalakshana456@gmail.com</span>
+              </div>
 
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="w-full p-3 bg-gray-800 text-white rounded-md outline-none focus:ring-2 focus:ring-blue-500"
-              />
+              <div className="flex items-center gap-3">
+                <FaPhone className="text-blue-400" />
+                <span>+94 70 185 6794</span>
+              </div>
 
-              <input
-                type="text"
-                placeholder="Subject"
-                className="w-full p-3 bg-gray-800 text-white rounded-md outline-none focus:ring-2 focus:ring-blue-500"
-              />
+              <div className="flex items-center gap-3">
+                <FaMapMarkerAlt className="text-blue-400" />
+                <span>Sri Lanka</span>
+              </div>
 
-              <textarea
-                rows="4"
-                placeholder="Your Message"
-                className="w-full p-3 bg-gray-800 text-white rounded-md outline-none focus:ring-2 focus:ring-blue-500"
-              ></textarea>
-
-              <button
-                type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 transition py-3 rounded-md font-medium"
-              >
-                Send Message
-              </button>
-
-            </form>
+            </div>
           </div>
 
-          {/* ===== RIGHT: CONTACT INFO ===== */}
-          <div className="space-y-8">
+          {/* Social Links Box */}
+          <div className="bg-[#111827] p-8 rounded-xl shadow-lg">
+            <h3 className="text-2xl font-semibold text-white mb-6">
+              Connect on Social
+            </h3>
 
-            {/* Contact Info Box */}
-            <div className="bg-[#111827] p-6 rounded-xl shadow-lg">
-              <h3 className="text-xl font-semibold text-white mb-4">
-                Contact Information
-              </h3>
+            <div className="grid sm:grid-cols-2 gap-4">
 
-              <div className="space-y-4 text-gray-300">
+ {/* GitHub */}
+    <a
+      href="https://github.com/dew-02"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-4 bg-gray-800 p-4 rounded-lg 
+                 hover:bg-gray-500 transition"
+    >
+      <FaGithub className="text-white text-xl" />
+      <div>
+        <p className="text-white font-medium">GitHub</p>
+        <p className="text-sm text-blue-200">@dew-02</p>
+      </div>
+    </a>
 
-                <div className="flex items-center gap-3">
-                  <FaEnvelope className="text-blue-400" />
-                  <span>dewminichalakshana456@gmail.com</span>
-                </div>
+{/* LinkedIn */}
+    <a
+      href="https://www.linkedin.com/in/dewmini-jayasinghe-b9308b31a"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-4 bg-gray-800 p-4 rounded-lg 
+                 hover:bg-gray-500 transition"
+    >
+      <FaLinkedin className="text-white text-xl" />
+      <div>
+        <p className="text-white font-medium">LinkedIn</p>
+        <p className="text-sm text-blue-200">Dewmini Jayasinghe</p>
+      </div>
+    </a>
 
-                <div className="flex items-center gap-3">
-                  <FaPhone className="text-blue-400" />
-                  <span>+94 70 185 6794</span>
-                </div>
+    {/* Instagram */}
+    <a
+      href="https://www.instagram.com/dew0._2?igsh=eWM4N3VmODBnYXZn"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-4 bg-gray-800 p-4 rounded-lg 
+                 hover:bg-gray-500 transition"
+    >
+      <FaInstagram className="text-white text-xl" />
+      <div>
+        <p className="text-white font-medium">Instagram</p>
+        <p className="text-sm text-blue-200">@dew._2</p>
+      </div>
+    </a>
 
-                <div className="flex items-center gap-3">
-                  <FaMapMarkerAlt className="text-blue-400" />
-                  <span>Sri Lanka</span>
-                </div>
+    {/* Facebook */}
+    <a
+      href="https://www.facebook.com/share/1Pc6MJx58s/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-4 bg-gray-800 p-4 rounded-lg 
+                 hover:bg-gray-500 transition"
+    >
+      <FaFacebook className="text-white text-xl" />
+      <div>
+        <p className="text-white font-medium">Facebook</p>
+        <p className="text-sm text-blue-200">Dewmini Chalakshana</p>
+      </div>
+    </a>
 
-              </div>
+
             </div>
+          </div>
 
-            {/* Social Links Box */}
-            <div className="bg-[#111827] p-6 rounded-xl shadow-lg">
-              <h3 className="text-xl font-semibold text-white mb-4">
-                Connect on Social
-              </h3>
-
-              <div className="space-y-4">
-
-                <a
-                  href="https://github.com/dew-02"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 bg-gray-800 p-3 rounded-md hover:bg-gray-700 transition"
-                >
-                  <FaGithub />
-                  GitHub
-                </a>
-
-                <a
-                  href="https://www.linkedin.com/in/dewmini-jayasinghe-b9308b31a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                  className="flex items-center gap-3 bg-gray-300 p-3 rounded-md hover:bg-gray-600 transition"
-                >
-                  <FaLinkedin />
-                  LinkedIn
-                </a>
-
-              </div>
-            </div>
-
+          {/* Start Conversation Button */}
+          <div className="flex justify-center pt-6">
+            <a
+              href="mailto:dewminichalakshana456@gmail.com"
+              className="bg-blue-600 text-black px-8 py-3 rounded-full 
+                         font-medium hover:bg-blue-700 transition"
+            >
+              Start Conversation
+            </a>
           </div>
 
         </div>
