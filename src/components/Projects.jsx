@@ -1,85 +1,130 @@
 import React from "react";
-import { motion } from "framer-motion";
+import bgImage from "../assets/projects.jpg";
+import project1 from "../assets/project1.png";
+import project2 from "../assets/project2.jpeg";
+import project3 from "../assets/project3.png";
+
+import { FaGithub } from "react-icons/fa";
 
 export default function Projects() {
   const projects = [
     {
-      title: "Crop Management System",
+      title: "Wild Lanka",
+      image: project1,
       description:
-        "Full-stack MERN web application for buying and selling used products with price negotiation and secure payments.",
-      github: "https://github.com/dew-02/Suhuru-Waga-System.git",
-      live: "#",
+        "Tourism web application built using React and Tailwind CSS with interactive UI and responsive design.",
+      github: "https://github.com/dew-02/project1",
+      tech: ["React", "Tailwind CSS", "Node.js"],
     },
     {
-      title: "Online Medical Portal",
+      title: "Medico 360",
+      image: project2,
       description:
-        "Web platform built using MERN stack to manage sustainable agriculture activities with user-friendly dashboards.",
-      github: "https://github.com/dew-02/online-medical-portal.git",
-      live: "#",
+        "Online medical portal designed to manage patient services and appointments with clean dashboard interface.",
+      github: "https://github.com/yourusername/project2",
+      tech: ["HTML", "CSS", "JavaScript"],
     },
     {
-      title: "Wellness Tracker App",
+      title: "ReGoods",
+      image: project3,
       description:
-        "Mobile app developed in Kotlin to track daily habits, health activities, and personal wellness goals.",
-      github: "https://github.com/dew-02/wellness-tracker-app.git",
-      live: "#",
+        "Sustainable product exchange platform focused on eco-friendly trading using modern web technologies.",
+      github: "https://github.com/yourusername/project3",
+      tech: ["React", "Firebase"],
     },
   ];
 
   return (
-    <section id="projects" className="bg-pink-50 py-20">
-      <div className="max-w-6xl mx-auto px-4">
-        <motion.h2
-          initial={{ opacity: 0, y: -40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-4xl font-bold text-center mb-12"
-        >
-          My Projects
-        </motion.h2>
+    <section id="projects">
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition duration-300"
-            >
-              <h3 className="text-xl font-semibold mb-3">
-                {project.title}
-              </h3>
+      {/* ================= HERO SECTION ================= */}
+      <div
+        className="relative h-[60vh] flex items-center justify-center text-center text-white"
+        style={{
+          backgroundImage: `url(${bgImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/70"></div>
 
-              <p className="text-gray-600 mb-6">
-                {project.description}
-              </p>
-
-              <div className="flex justify-between">
-                <a
-                  href={project.github}
-                  className="text-blue-600 font-medium hover:underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub →
-                </a>
-
-                <a
-                  href={project.live}
-                  className="text-green-600 font-medium hover:underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Live Demo →
-                </a>
-              </div>
-            </motion.div>
-          ))}
+        <div className="relative z-10 max-w-3xl px-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Recent Projects
+          </h2>
+          <p className="text-lg md:text-xl text-gray-300 font-medium max-w-2xl mx-auto leading-relaxed">
+            A showcase of my recent work, highlighting full-stack development,
+            UI design, and modern web technologies.
+          </p>
         </div>
       </div>
+
+      {/* ================= PROJECT CARDS ================= */}
+      <div className="bg-[#0f172a] py-20">
+        <div className="max-w-6xl mx-auto px-6">
+
+          <div className="grid md:grid-cols-3 gap-8">
+
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                className="bg-[#111827] rounded-xl overflow-hidden shadow-lg 
+                           hover:-translate-y-3 hover:shadow-blue-500/40 
+                           transition-all duration-300"
+              >
+
+                {/* Project Image */}
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-56 object-cover"
+                />
+
+                {/* Content */}
+                <div className="p-6">
+
+                  {/* Title + Github */}
+                  <div className="flex justify-between items-center mb-3">
+                    <h3 className="text-xl font-semibold text-white">
+                      {project.title}
+                    </h3>
+
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-white transition"
+                    >
+                      <FaGithub size={20} />
+                    </a>
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-gray-400 text-sm mb-4 leading-relaxed">
+                    {project.description}
+                  </p>
+
+                  {/* Tech Used */}
+                  <div className="flex flex-wrap gap-2">
+                    {project.tech.map((tech, i) => (
+                      <span
+                        key={i}
+                        className="bg-gray-800 text-gray-300 px-3 py-1 text-xs rounded-md"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                </div>
+              </div>
+            ))}
+
+          </div>
+
+        </div>
+      </div>
+
     </section>
   );
 }
