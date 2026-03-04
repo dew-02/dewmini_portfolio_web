@@ -1,6 +1,7 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import mePhoto from "../assets/me.jpeg"; // IMPORTANT: correct import
+import mePhoto from "../assets/me.jpeg"; 
+
 
 export default function Hero() {
   return (
@@ -91,5 +92,7 @@ export default function Hero() {
                   
 
     </section>
+    
+    
   );
 }
