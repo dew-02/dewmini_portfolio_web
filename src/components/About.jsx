@@ -1,12 +1,25 @@
 import { motion } from "framer-motion";
 import uniImg from "../assets/uni.png";
 import schoolImg from "../assets/school.jpg";
-import companyImg from "../assets/openuni.png";
+import openuniImg from "../assets/openuni.png";
+import aboutBg from "../assets/projects.jpg"; 
 
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-[#0f172a] text-white">
-      <div className="max-w-7xl mx-auto px-6">
+    <section
+      id="about"
+      className="relative py-24 text-white"
+      style={{
+        backgroundImage: `url(${aboutBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-[#0f172a]/90"></div>
+
+      <div className="relative max-w-7xl mx-auto px-6">
 
         {/* ================= ABOUT ME ================= */}
         <motion.div
@@ -28,7 +41,10 @@ export default function About() {
 
           <p className="text-gray-300 max-w-3xl mx-auto leading-relaxed">
             I'm <span className="text-blue-400 font-semibold">Dewmini Chalakshana</span>, a{" "}
-            <span className="text-blue-400 font-semibold">BSc in Information Technology student</span> at SLIIT passionate about creating elegant solutions and building modern web applications while continuously growing my skills.
+            <span className="text-blue-400 font-semibold">
+              BSc in Information Technology student
+            </span>{" "}
+            at SLIIT passionate about creating elegant solutions and building modern web applications while continuously growing my skills.
           </p>
         </motion.div>
 
@@ -44,12 +60,11 @@ export default function About() {
             My Journey
           </h2>
 
-          {/* 🔵 BOX ADDED HERE */}
           <div className="bg-[#111827] border border-blue-500/20 rounded-2xl p-8 shadow-lg max-w-4xl mx-auto hover:shadow-blue-500/30 transition-all duration-300">
 
             <div className="space-y-6 text-gray-300 leading-relaxed">
               <p>
-                Hello! I'm Dewmini Chalakshana, also known as MrRandiv in the developer community. I'm a{" "}
+                Hello! I'm Dewmini Chalakshana, I'm a{" "}
                 <span className="text-blue-400 font-semibold">
                   BSc in Information Technology student
                 </span>{" "}
@@ -57,11 +72,7 @@ export default function About() {
               </p>
 
               <p>
-                My journey into software development started with curiosity about how web applications work. Through coursework and hands-on projects, I've built over{" "}
-                <span className="text-blue-400 font-semibold">
-                  10 functional web applications
-                </span>
-                , ranging from e-commerce platforms to real-time collaboration tools. Each project has been a learning opportunity that has shaped my understanding of modern development practices.
+                My journey into software development started with curiosity about how web applications work. Through coursework and hands-on projects, I've built several functional web applications across different domains, each strengthening my problem-solving and development skills, ranging from e-commerce platforms to real-time collaboration tools.
               </p>
 
               <p>
@@ -73,15 +84,15 @@ export default function About() {
                 <span className="text-blue-400 font-semibold">
                   DevOps tools and methodologies
                 </span>{" "}
-                including Docker, CI/CD pipelines, and deployment automation. I believe in writing clean, maintainable code and following industry best practices.
+                including Docker, CI/CD pipelines, and deployment automation.
               </p>
 
               <p>
-                I'm eager to apply my knowledge in professional settings, contribute to real-world projects, and continue growing as a developer. I stay up-to-date with emerging technologies through online courses, documentation, and hands-on experimentation.
+                I'm eager to apply my knowledge in professional settings, contribute to real-world projects, and continue growing as a developer.
               </p>
 
               <p>
-                Outside of coding, I explore new frameworks, contribute to open-source when possible, and collaborate on exciting opportunities. I'm currently seeking{" "}
+                I'm currently seeking{" "}
                 <span className="text-blue-400 font-semibold">
                   internship opportunities
                 </span>{" "}
@@ -93,8 +104,6 @@ export default function About() {
         </motion.div>
 
         {/* ================= EDUCATION & EXPERIENCE ================= */}
-        {/* (UNCHANGED — Your Existing Code Below) */}
-
         <motion.div
           className="mt-24"
           initial={{ opacity: 0, y: 60 }}
@@ -114,9 +123,8 @@ export default function About() {
                 Education
               </h3>
 
-              <div className="bg-[#111827] border-l-4 border-blue-500 rounded-xl p-6 shadow-lg relative 
-                              hover:shadow-blue-500/40 hover:-translate-y-2 
-                              transition-all duration-300 cursor-pointer mb-8">
+              {/* University */}
+              <div className="bg-[#111827] border-l-4 border-blue-500 rounded-xl p-6 shadow-lg relative hover:shadow-blue-500/40 hover:-translate-y-2 transition-all duration-300 cursor-pointer mb-8">
 
                 <span className="absolute top-6 right-6 bg-green-500/10 text-green-400 text-xs px-3 py-1 rounded-full">
                   Current
@@ -142,11 +150,17 @@ export default function About() {
                   Studying software engineering, full-stack development,
                   databases, networking, cloud technologies, and cybersecurity.
                 </p>
+
+                <div className="flex flex-wrap gap-2 mt-4">
+                  <span className="bg-green-500/10 text-blue-400 text-xs px-3 py-1 rounded-md">Web Development</span>
+                  <span className="bg-green-500/10 text-blue-400 text-xs px-3 py-1 rounded-md">Databases</span>
+                  <span className="bg-green-500/10 text-blue-400 text-xs px-3 py-1 rounded-md">Programming</span>
+                  <span className="bg-green-500/10 text-blue-400 text-xs px-3 py-1 rounded-md">Networking</span>
+                </div>
               </div>
 
-              <div className="bg-[#111827] border-l-4 border-purple-500 rounded-xl p-6 shadow-lg 
-                              hover:shadow-purple-500/40 hover:-translate-y-2 
-                              transition-all duration-300 cursor-pointer">
+              {/* School */}
+              <div className="bg-[#111827] border-l-4 border-purple-500 rounded-xl p-6 shadow-lg hover:shadow-purple-500/40 hover:-translate-y-2 transition-all duration-300 cursor-pointer">
 
                 <div className="flex gap-4">
                   <div className="w-16 h-16 rounded-lg overflow-hidden bg-white">
@@ -156,15 +170,52 @@ export default function About() {
                   <div>
                     <h4 className="font-semibold">GCE Advanced Level</h4>
                     <p className="text-purple-400 text-sm">
-                      Your School Name
+                      St.Anthony's Girls' College Kandy
                     </p>
                     <p className="text-gray-400 text-xs">2020 - 2022</p>
                   </div>
                 </div>
 
                 <p className="text-gray-300 text-sm mt-4">
-                  Completed Advanced Level with strong focus on Mathematics and IT.
+                  Completed GCE Advanced Level in the Physical Science stream, building a strong analytical and mathematical foundation that supports my IT studies.
                 </p>
+
+                <div className="flex flex-wrap gap-2 mt-4">
+                  <span className="bg-green-500/10 text-purple-400 text-xs px-3 py-1 rounded-md">Mathematics</span>
+                  <span className="bg-green-500/10 text-purple-400 text-xs px-3 py-1 rounded-md">Physics</span>
+                  <span className="bg-green-500/10 text-purple-400 text-xs px-3 py-1 rounded-md">Chemistry</span>
+                </div>
+              </div>
+
+              {/* Open University */}
+              <div className="bg-[#111827] border-l-4 border-yellow-500 rounded-xl p-6 shadow-lg hover:shadow-yellow-500/40 hover:-translate-y-2 transition-all duration-300 cursor-pointer mt-8">
+
+                <div className="flex gap-4">
+                  <div className="w-16 h-16 rounded-lg overflow-hidden bg-white">
+                    <img src={openuniImg} alt="Open University" className="w-full h-full object-cover" />
+                  </div>
+
+                  <div>
+                    <h4 className="font-semibold">Certificate in Information Technology</h4>
+                    <p className="text-yellow-400 text-sm">
+                      Open University of Sri Lanka
+                    </p>
+                    <p className="text-gray-400 text-xs">2023</p>
+                  </div>
+                </div>
+
+                <p className="text-gray-300 text-sm mt-4">
+                  Gained foundational knowledge in Information Technology including computer hardware concepts,
+                  operating systems, and practical experience with Microsoft Office applications.
+                </p>
+
+                <div className="flex flex-wrap gap-2 mt-4">
+                  <span className="bg-yellow-500/10 text-yellow-400 text-xs px-3 py-1 rounded-md">MS Word</span>
+                  <span className="bg-yellow-500/10 text-yellow-400 text-xs px-3 py-1 rounded-md">MS Excel</span>
+                  <span className="bg-yellow-500/10 text-yellow-400 text-xs px-3 py-1 rounded-md">MS PowerPoint</span>
+                  <span className="bg-yellow-500/10 text-yellow-400 text-xs px-3 py-1 rounded-md">Computer Hardware</span>
+                </div>
+
               </div>
             </div>
 
@@ -174,49 +225,20 @@ export default function About() {
                 Experience
               </h3>
 
-              <div className="bg-[#111827] border-l-4 border-green-500 rounded-xl p-6 shadow-lg relative 
-                              hover:shadow-green-500/40 hover:-translate-y-2 
-                              transition-all duration-300 cursor-pointer">
+              <div className="bg-[#111827] border-l-4 border-green-500 rounded-xl p-6 shadow-lg relative hover:shadow-green-500/40 hover:-translate-y-2 transition-all duration-300 cursor-pointer">
 
-                <span className="absolute top-6 right-6 bg-green-500/10 text-green-400 text-xs px-3 py-1 rounded-full">
-                  Current
+                <span className="absolute top-6 right-6 bg-blue-500/10 text-blue-400 text-xs px-3 py-1 rounded-full">
+                  Actively Seeking
                 </span>
 
-                <div className="flex gap-4">
-                  <div className="w-16 h-16 rounded-lg overflow-hidden bg-white">
-                    <img src={companyImg} alt="Company" className="w-full h-full object-cover" />
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold">
-                      Intern Full-Stack Developer
-                    </h4>
-                    <p className="text-green-400 text-sm">
-                      Pixel Clear (Pvt) Ltd
-                    </p>
-                    <p className="text-gray-400 text-xs">Present</p>
-                  </div>
-                </div>
+                <h4 className="font-semibold">
+                  Internship Seeker – Full-Stack Development
+                </h4>
 
                 <p className="text-gray-300 text-sm mt-4">
-                  Developing and maintaining full-stack web applications.
-                  Working with WordPress, MySQL databases, and deploying systems.
+                  Embarking on my first professional internship, applying academic knowledge to real-world projects, collaborating with industry experts, and gaining hands-on experience in full-stack software development.
                 </p>
 
-                <div className="flex flex-wrap gap-2 mt-4">
-                  <span className="bg-green-500/10 text-green-400 text-xs px-3 py-1 rounded-md">
-                    WordPress
-                  </span>
-                  <span className="bg-green-500/10 text-green-400 text-xs px-3 py-1 rounded-md">
-                    PHP
-                  </span>
-                  <span className="bg-green-500/10 text-green-400 text-xs px-3 py-1 rounded-md">
-                    MySQL
-                  </span>
-                  <span className="bg-green-500/10 text-green-400 text-xs px-3 py-1 rounded-md">
-                    Tailwind
-                  </span>
-                </div>
               </div>
             </div>
 
