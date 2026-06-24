@@ -1,7 +1,7 @@
 import React from "react";
 import { FaArrowRight, FaGithub, FaLinkedin, FaReact } from "react-icons/fa";
 import { SiTailwindcss, SiNodedotjs, SiMongodb } from "react-icons/si";
-import mePhoto from "../assets/me.jpeg";
+import mePhoto from "../assets/me_new.png";
 
 const highlights = [
   { value: "MERN", label: "Stack focus" },

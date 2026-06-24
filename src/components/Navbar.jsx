@@ -23,7 +23,7 @@ export default function Navbar() {
           />
           <span className="leading-tight">
             <span className="block text-sm font-black uppercase tracking-[0.22em] text-white">
-              Dewmini
+              Dewmini Chalakshana
             </span>
             <span className="block text-xs font-semibold text-blue-100/75">
               Full-Stack Developer
