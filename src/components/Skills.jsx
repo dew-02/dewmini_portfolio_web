@@ -1,232 +1,134 @@
 import React from "react";
+import {
+  FaCode,
+  FaDatabase,
+  FaGitAlt,
+  FaLaptopCode,
+  FaMobileAlt,
+  FaServer,
+  FaTools,
+} from "react-icons/fa";
+import { SiPostman } from "react-icons/si";
 import bgImage from "../assets/skills.jpg";
 
+const groups = [
+  {
+    title: "Programming",
+    icon: <FaCode />,
+    accent: "text-cyan-200 bg-cyan-300/12",
+    skills: ["C", "C++", "Java", "Python"],
+  },
+  {
+    title: "Frontend",
+    icon: <FaLaptopCode />,
+    accent: "text-rose-200 bg-rose-300/12",
+    skills: ["HTML5", "CSS3", "JavaScript", "React.js", "Tailwind CSS", "Bootstrap", "Figma"],
+  },
+  {
+    title: "Backend",
+    icon: <FaServer />,
+    accent: "text-lime-200 bg-lime-300/12",
+    skills: ["Node.js", "Express.js", "Java", "PHP", "REST APIs"],
+  },
+  {
+    title: "Databases",
+    icon: <FaDatabase />,
+    accent: "text-blue-200 bg-blue-300/12",
+    skills: ["MySQL", "SQLite", "MongoDB", "ER Diagrams", "Database Design"],
+  },
+  {
+    title: "Mobile",
+    icon: <FaMobileAlt />,
+    accent: "text-cyan-200 bg-cyan-300/12",
+    skills: ["Android Studio", "Kotlin", "Java"],
+  },
+  {
+    title: "Engineering Basics",
+    icon: <FaTools />,
+    accent: "text-rose-200 bg-rose-300/12",
+    skills: ["OOP", "Data Structures", "SDLC", "MVC Architecture", "Design Patterns", "Agile"],
+  },
+  {
+    title: "API Testing",
+    icon: <SiPostman />,
+    accent: "text-lime-200 bg-lime-300/12",
+    skills: ["Postman", "API Documentation", "Request Testing"],
+  },
+  {
+    title: "Version Control",
+    icon: <FaGitAlt />,
+    accent: "text-blue-200 bg-blue-300/12",
+    skills: ["Git", "GitHub", "GitHub Desktop", "Branching", "Pull Requests"],
+  },
+  {
+    title: "Tools & IDEs",
+    icon: <FaTools />,
+    accent: "text-cyan-200 bg-cyan-300/12",
+    skills: ["VS Code", "Eclipse", "IntelliJ IDEA", "Android Studio", "R Studio", "Arduino IDE"],
+  },
+];
+
 export default function Skills() {
-  const skills = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "React",
-    "Tailwind CSS",
-    "Git",
-    "VS Code",
-  ];
-
   return (
-    <section id="skills">
-
-      {/* ================= HERO INTRO SECTION ================= */}
-      <div
-        className="relative h-[60vh] flex items-center justify-center text-center text-white"
-        style={{
-          backgroundImage: `url(${bgImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+    <main>
+      <section
+        className="page-hero"
+        style={{ backgroundImage: `url(${bgImage})` }}
       >
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/70"></div>
-
-        <div className="relative z-10 max-w-3xl px-6">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Skills & Technologies
-          </h1>
-          <p className="text-gray-250">
-        
-                     
-                     
-<p className="text-lg md:text-xl text-gray-300 font-medium max-w-2xl mx-auto leading-relaxed">
-  A comprehensive overview of my technical skills and expertise.
-</p>
-
-            <br></br>
-I specialize in building modern, scalable web applications using cutting-edge technologies.
- From frontend frameworks to backend services, databases to deployment tools, here's what I work with.        
-   </p>
+        <div className="page-shell max-w-4xl text-center">
+          <span className="eyebrow mx-auto">Skills & Technologies</span>
+          <h1 className="section-title mt-6">A practical toolkit for building.</h1>
+          <p className="section-copy mx-auto mt-6 max-w-3xl">
+            A focused overview of the languages, frameworks, tools, and
+            development concepts I use while creating responsive web and mobile
+            applications.
+          </p>
         </div>
-      </div>
+      </section>
 
-      {/* ================= SKILLS CONTENT SECTION ================= */}
-<div className="bg-[#0f172a] py-20">
-  <div className="max-w-6xl mx-auto px-6">
+      <section className="section-pad">
+        <div className="page-shell">
+          <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div>
+              <span className="eyebrow">Technical Stack</span>
+              <h2 className="section-title mt-5">What I work with</h2>
+            </div>
+            <p className="section-copy max-w-xl">
+              Balanced across frontend, backend, data, mobile, and collaboration
+              so I can understand the full shape of a product.
+            </p>
+          </div>
 
-    <h3 className="text-3xl font-bold text-center text-white mb-14">
-      My Technical Skills
-    </h3>
+          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            {groups.map((group) => (
+              <article
+                key={group.title}
+                className="glass-panel rounded-3xl p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-200/35"
+              >
+                <div className="flex items-center gap-4">
+                  <div
+                    className={`grid h-12 w-12 place-items-center rounded-2xl text-xl ${group.accent}`}
+                  >
+                    {group.icon}
+                  </div>
+                  <h3 className="text-xl font-black text-white">{group.title}</h3>
+                </div>
 
-    <div className="grid md:grid-cols-3 gap-8">
-
-      {/* Programming Languages */}
-      <div className="bg-[#111827] p-6 rounded-xl shadow-lg 
-                      hover:shadow-blue-500/40 hover:-translate-y-2 
-                      transition-all duration-300">
-        <h4 className="text-xl font-semibold text-blue-400 mb-4">
-          Programming Languages
-        </h4>
-
-        <div className="flex flex-wrap gap-3">
-          {["C","C++","Java", "Python"].map((skill, index) => (
-            <span key={index}
-              className="bg-gray-800 text-gray-300 px-3 py-1 text-sm rounded-md">
-              {skill}
-            </span>
-          ))}
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {group.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="rounded-full border border-white/10 bg-white/[0.06] px-3 py-2 text-xs font-bold text-slate-200"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
-      </div>
-
-      {/* Frontend */}
-      <div className="bg-[#111827] p-6 rounded-xl shadow-lg 
-                      hover:shadow-purple-500/40 hover:-translate-y-2 
-                      transition-all duration-300">
-        <h4 className="text-xl font-semibold text-purple-400 mb-4">
-          Frontend
-        </h4>
-
-        <div className="flex flex-wrap gap-3">
-          {["HTML5", "CSS3", "React.js", "Tailwind CSS","JavaScript","Bootstrap","Figma(UI/UX Design)"].map((skill, index) => (
-            <span key={index}
-              className="bg-gray-800 text-gray-300 px-3 py-1 text-sm rounded-md">
-              {skill}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      {/* Tools */}
-      <div className="bg-[#111827] p-6 rounded-xl shadow-lg 
-                      hover:shadow-green-500/40 hover:-translate-y-2 
-                      transition-all duration-300">
-        <h4 className="text-xl font-semibold text-green-400 mb-4">
-          Backend
-        </h4>
-
-        <div className="flex flex-wrap gap-3">
-          {["Node.js","Express.js","Java","PHP","API"].map((skill, index) => (
-            <span key={index}
-              className="bg-gray-800 text-gray-300 px-3 py-1 text-sm rounded-md">
-              {skill}
-            </span>
-          ))}
-        </div>
-      </div>
-
-{/* Database*/}
-      <div className="bg-[#111827] p-6 rounded-xl shadow-lg 
-                      hover:shadow-purple-500/40 hover:-translate-y-2 
-                      transition-all duration-300">
-        <h4 className="text-xl font-semibold text-purple-400 mb-4">
-          Database
-        </h4>
-
-        <div className="flex flex-wrap gap-3">
-          {["MySQL","SQLite","MongoDB","Database Design(ER Diagrams)"].map((skill, index) => (
-            <span key={index}
-              className="bg-gray-800 text-gray-300 px-3 py-1 text-sm rounded-md">
-              {skill}
-            </span>
-          ))}
-        </div>
-      </div>
-
-{/* Mobile Development */}
-      <div className="bg-[#111827] p-6 rounded-xl shadow-lg 
-                      hover:shadow-green-500/40 hover:-translate-y-2 
-                      transition-all duration-300">
-        <h4 className="text-xl font-semibold text-green-400 mb-4">
-          Mobile Development
-        </h4>
-
-        <div className="flex flex-wrap gap-3">
-          {["Android Studio", "Kotlin","Java"].map((skill, index) => (
-            <span key={index}
-              className="bg-gray-800 text-gray-300 px-3 py-1 text-sm rounded-md">
-              {skill}
-            </span>
-          ))}
-        </div>
-      </div>
-
-       {/* Software Engineering Fundamentals */}
-      <div className="bg-[#111827] p-6 rounded-xl shadow-lg 
-                      hover:shadow-blue-500/40 hover:-translate-y-2 
-                      transition-all duration-300">
-        <h4 className="text-xl font-semibold text-blue-400 mb-4">
-          Software Engineering Fundamentals
-        </h4>
-
-        <div className="flex flex-wrap gap-3">
-          {["Object-Oriented Programming (OOP)","Data Structures and Algorithms","Software Development Life Cycle (SDLC)","MVC Architecture","Design Patterns (Basic)","Agile & Screen Methodology"].map((skill, index) => (
-            <span key={index}
-              className="bg-gray-800 text-gray-300 px-3 py-1 text-sm rounded-md">
-              {skill}
-            </span>
-          ))}
-        </div>
-      </div>
-
-{/* API Development & Testing*/}
-      <div className="bg-[#111827] p-6 rounded-xl shadow-lg 
-                      hover:shadow-green-500/40 hover:-translate-y-2 
-                      transition-all duration-300">
-        <h4 className="text-xl font-semibold text-green-400 mb-4">
-          API Development & Testing
-        </h4>
-
-        <div className="flex flex-wrap gap-3">
-          {["Postman"].map((skill, index) => (
-            <span key={index}
-              className="bg-gray-800 text-gray-300 px-3 py-1 text-sm rounded-md">
-              {skill}
-            </span>
-          ))}
-        </div>
-      </div>
-
-
-      {/* Version Control & Collaboration */}
-      <div className="bg-[#111827] p-6 rounded-xl shadow-lg 
-                      hover:shadow-blue-500/40 hover:-translate-y-2 
-                      transition-all duration-300">
-        <h4 className="text-xl font-semibold text-blue-400 mb-4">
-          Version Control & Collaboration
-        </h4>
-
-        <div className="flex flex-wrap gap-3">
-          {["GitHub","GitHub Desktop","Git","Branching & Pull Requests"].map((skill, index) => (
-            <span key={index}
-              className="bg-gray-800 text-gray-300 px-3 py-1 text-sm rounded-md">
-              {skill}
-            </span>
-          ))}
-        </div>
-      </div>
-
-{/* Development Tools & IDEs */}
-      <div className="bg-[#111827] p-6 rounded-xl shadow-lg 
-                      hover:shadow-purple-500/40 hover:-translate-y-2 
-                      transition-all duration-300">
-        <h4 className="text-xl font-semibold text-purple-400 mb-4">
-          Development Tools & IDEs
-        </h4>
-
-        <div className="flex flex-wrap gap-3">
-          {["Visual Studio Code","Eclipse","Android Studio","dev c++","R Studio","IntelliJ IDEA" ,"Arduino IDE"].map((skill, index) => (
-            <span key={index}
-              className="bg-gray-800 text-gray-300 px-3 py-1 text-sm rounded-md">
-              {skill}
-            </span>
-          ))}
-        </div>
-      </div>
-
-
-
-
-
-    </div>
-  </div>
-</div>
-
-    </section>
+      </section>
+    </main>
   );
 }

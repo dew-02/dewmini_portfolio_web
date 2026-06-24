@@ -1,158 +1,160 @@
 import React from "react";
 import bgImage from "../assets/contat.webp";
 import {
-  FaGithub,
-  FaLinkedin,
   FaEnvelope,
-  FaPhone,
-  FaMapMarkerAlt,
-  FaInstagram,
   FaFacebook,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaMapMarkerAlt,
+  FaPhone,
 } from "react-icons/fa";
+
+const contactItems = [
+  {
+    icon: <FaEnvelope />,
+    label: "Email",
+    value: "dewminichalakshana456@gmail.com",
+    href: "mailto:dewminichalakshana456@gmail.com",
+  },
+  {
+    icon: <FaPhone />,
+    label: "Phone",
+    value: "+94 70 185 6794",
+    href: "tel:+94701856794",
+  },
+  {
+    icon: <FaMapMarkerAlt />,
+    label: "Location",
+    value: "Sri Lanka",
+    href: null,
+  },
+];
+
+const socials = [
+  {
+    icon: <FaGithub />,
+    label: "GitHub",
+    value: "@dew-02",
+    href: "https://github.com/dew-02",
+  },
+  {
+    icon: <FaLinkedin />,
+    label: "LinkedIn",
+    value: "Dewmini Jayasinghe",
+    href: "https://www.linkedin.com/in/dewmini-jayasinghe-b9308b31a",
+  },
+  {
+    icon: <FaInstagram />,
+    label: "Instagram",
+    value: "@dew0._2",
+    href: "https://www.instagram.com/dew0._2?igsh=eWM4N3VmODBnYXZn",
+  },
+  {
+    icon: <FaFacebook />,
+    label: "Facebook",
+    value: "Dewmini Chalakshana",
+    href: "https://www.facebook.com/share/1Pc6MJx58s/",
+  },
+];
 
 export default function Contact() {
   return (
-    <section id="contact">
-
-      {/* ================= HERO SECTION ================= */}
-      <div
-        className="relative h-[60vh] flex items-center justify-center text-center text-white"
-        style={{
-          backgroundImage: `url(${bgImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+    <main>
+      <section
+        className="page-hero"
+        style={{ backgroundImage: `url(${bgImage})` }}
       >
-        <div className="absolute inset-0 bg-black/70"></div>
-
-        <div className="relative z-10 max-w-3xl px-6">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Get In Touch
-          </h2>
-          <p className="text-lg text-gray-300">
-            I'm always open to new opportunities and collaborations.
-            Whether you have a specific project in mind or just want to chat about technology,
-            feel free to reach out.
+        <div className="page-shell max-w-4xl text-center">
+          <span className="eyebrow mx-auto">Contact</span>
+          <h1 className="section-title mt-6">Let us build something useful.</h1>
+          <p className="section-copy mx-auto mt-6 max-w-3xl">
+            I am open to internship opportunities, collaboration, and projects
+            where I can contribute, learn, and grow as a developer.
           </p>
         </div>
-      </div>
+      </section>
 
-      {/* ================= CONTACT CONTENT ================= */}
-      <div className="bg-[#0f172a] py-20">
-        <div className="max-w-5xl mx-auto px-6 space-y-10">
+      <section className="section-pad">
+        <div className="page-shell grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+          <div className="glass-panel rounded-3xl p-8">
+            <span className="eyebrow">Reach Me</span>
+            <h2 className="mt-5 text-4xl font-black text-white">
+              Ready for the next opportunity.
+            </h2>
+            <p className="section-copy mt-5">
+              Send a message for internships, project ideas, or developer
+              collaborations. I usually respond through email or LinkedIn.
+            </p>
 
-          {/* Contact Information Box */}
-          <div className="bg-[#111827] p-8 rounded-xl shadow-lg">
-            <h3 className="text-2xl font-semibold text-white mb-6">
-              Contact Information
-            </h3>
+            <div className="mt-8 grid gap-4">
+              {contactItems.map((item) => {
+                const content = (
+                  <>
+                    <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-cyan-300/12 text-cyan-200">
+                      {item.icon}
+                    </div>
+                    <div>
+                      <p className="text-sm font-black uppercase tracking-[0.12em] text-slate-400">
+                        {item.label}
+                      </p>
+                      <p className="mt-1 break-words font-bold text-white">
+                        {item.value}
+                      </p>
+                    </div>
+                  </>
+                );
 
-            <div className="space-y-5 text-gray-300">
-
-              <div className="flex items-center gap-3">
-                <FaEnvelope className="text-blue-400" />
-                <span>dewminichalakshana456@gmail.com</span>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <FaPhone className="text-blue-400" />
-                <span>+94 70 185 6794</span>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <FaMapMarkerAlt className="text-blue-400" />
-                <span>Sri Lanka</span>
-              </div>
-
+                return item.href ? (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    className="flex items-center gap-4 rounded-3xl border border-white/10 bg-white/[0.05] p-4 transition hover:border-cyan-200/35"
+                  >
+                    {content}
+                  </a>
+                ) : (
+                  <div
+                    key={item.label}
+                    className="flex items-center gap-4 rounded-3xl border border-white/10 bg-white/[0.05] p-4"
+                  >
+                    {content}
+                  </div>
+                );
+              })}
             </div>
-          </div>
 
-          {/* Social Links Box */}
-          <div className="bg-[#111827] p-8 rounded-xl shadow-lg">
-            <h3 className="text-2xl font-semibold text-white mb-6">
-              Connect on Social
-            </h3>
-
-            <div className="grid sm:grid-cols-2 gap-4">
-
- {/* GitHub */}
-    <a
-      href="https://github.com/dew-02"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center gap-4 bg-gray-800 p-4 rounded-lg 
-                 hover:bg-gray-500 transition"
-    >
-      <FaGithub className="text-white text-xl" />
-      <div>
-        <p className="text-white font-medium">GitHub</p>
-        <p className="text-sm text-blue-200">@dew-02</p>
-      </div>
-    </a>
-
-{/* LinkedIn */}
-    <a
-      href="https://www.linkedin.com/in/dewmini-jayasinghe-b9308b31a"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center gap-4 bg-gray-800 p-4 rounded-lg 
-                 hover:bg-gray-500 transition"
-    >
-      <FaLinkedin className="text-white text-xl" />
-      <div>
-        <p className="text-white font-medium">LinkedIn</p>
-        <p className="text-sm text-blue-200">Dewmini Jayasinghe</p>
-      </div>
-    </a>
-
-    {/* Instagram */}
-    <a
-      href="https://www.instagram.com/dew0._2?igsh=eWM4N3VmODBnYXZn"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center gap-4 bg-gray-800 p-4 rounded-lg 
-                 hover:bg-gray-500 transition"
-    >
-      <FaInstagram className="text-white text-xl" />
-      <div>
-        <p className="text-white font-medium">Instagram</p>
-        <p className="text-sm text-blue-200">@dew._2</p>
-      </div>
-    </a>
-
-    {/* Facebook */}
-    <a
-      href="https://www.facebook.com/share/1Pc6MJx58s/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center gap-4 bg-gray-800 p-4 rounded-lg 
-                 hover:bg-gray-500 transition"
-    >
-      <FaFacebook className="text-white text-xl" />
-      <div>
-        <p className="text-white font-medium">Facebook</p>
-        <p className="text-sm text-blue-200">Dewmini Chalakshana</p>
-      </div>
-    </a>
-
-
-            </div>
-          </div>
-
-          {/* Start Conversation Button */}
-          <div className="flex justify-center pt-6">
             <a
               href="mailto:dewminichalakshana456@gmail.com"
-              className="bg-blue-600 text-black px-8 py-3 rounded-full 
-                         font-medium hover:bg-blue-700 transition"
+              className="primary-button mt-8"
             >
               Start Conversation
             </a>
           </div>
 
+          <div className="grid gap-4 sm:grid-cols-2">
+            {socials.map((social) => (
+              <a
+                key={social.label}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass-panel rounded-3xl p-6 transition hover:-translate-y-1 hover:border-cyan-200/35"
+              >
+                <div className="grid h-12 w-12 place-items-center rounded-2xl bg-white/[0.07] text-2xl text-cyan-100">
+                  {social.icon}
+                </div>
+                <h3 className="mt-6 text-2xl font-black text-white">
+                  {social.label}
+                </h3>
+                <p className="mt-2 text-sm font-semibold text-slate-300">
+                  {social.value}
+                </p>
+              </a>
+            ))}
+          </div>
         </div>
-      </div>
-
-    </section>
+      </section>
+    </main>
   );
 }

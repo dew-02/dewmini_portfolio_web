@@ -1,149 +1,136 @@
 import React from "react";
+import { FaArrowUpRightFromSquare, FaGithub } from "react-icons/fa6";
 import bgImage from "../assets/projects.jpg";
 import project1 from "../assets/project1.png";
 import project2 from "../assets/project2.jpeg";
 import project3 from "../assets/project3.png";
 import project4 from "../assets/project4.jpg";
 
-import { FaGithub } from "react-icons/fa";
+const projects = [
+  {
+    title: "Crop Management System",
+    image: project1,
+    description:
+      "A responsive web application for agricultural product workflows with clean screens, reusable UI pieces, and practical project structure.",
+    github: "https://github.com/dew-02/Suhuru-Waga-System.git",
+    tech: ["JavaScript", "CSS", "HTML"],
+    type: "Web App",
+  },
+  {
+    title: "Online Medical Portal",
+    image: project2,
+    description:
+      "A medical service portal for managing appointments and patient-facing workflows through a focused dashboard interface.",
+    github: "https://github.com/dew-02/online-medical-portal.git",
+    tech: ["PHP", "CSS", "JavaScript"],
+    type: "Portal",
+  },
+  {
+    title: "Wellness Tracker",
+    image: project3,
+    description:
+      "A Kotlin mobile app for tracking wellness habits, daily health activities, and personal progress goals.",
+    github: "https://github.com/dew-02/wellness-tracker-app.git",
+    tech: ["Kotlin", "Android"],
+    type: "Mobile",
+  },
+  {
+    title: "Learn Languages",
+    image: project4,
+    description:
+      "A mobile learning app concept designed to support language practice with simple flows and approachable screens.",
+    github: "https://github.com/dew-02/learn-languages-app-mad_lab_exam_2.git",
+    tech: ["Kotlin", "Android"],
+    type: "Mobile",
+  },
+];
 
 export default function Projects() {
-  const projects = [
-    {
-      title: "Crop Management System",
-      image: project1,
-      description:
-        "Full-stack MERN web application for buying and selling used products with price negotiation and secure payments. web application built using React and Tailwind CSS with interactive UI and responsive design.",
-      github: "https://github.com/dew-02/Suhuru-Waga-System.git",
-      tech: ["JavaScript", "CSS", "HTML"],
-    },
-    {
-      title: "Online Medical Portal",
-      image: project2,
-      description:
-        "Online medical portal designed to manage patient services and appointments with clean dashboard interface.",
-      github: "https://github.com/dew-02/online-medical-portal.git",
-      tech: ["PHP", "CSS", "JavaScript","Hack"],
-    },
-    {
-      title: "Wellness Tracker",
-      image: project3,
-      description:
-        "Mobile app developed in Kotlin to track daily habits, health activities, and personal wellness goals.",
-      github: "https://github.com/dew-02/wellness-tracker-app.git",
-      tech: ["Kotlin"],
-    },
-
-{
-      title: "Learn Languages",
-      image: project4,
-      description:
-        "Online medical portal designed to manage patient services and appointments with clean dashboard interface.",
-      github: "https://github.com/dew-02/learn-languages-app-mad_lab_exam_2.git",
-      tech: ["Kotlin"],
-    },
-
-
-
-
-
-
-
-
-
-  ];
-
   return (
-    <section id="projects">
-
-      {/* ================= HERO SECTION ================= */}
-      <div
-        className="relative h-[60vh] flex items-center justify-center text-center text-white"
-        style={{
-          backgroundImage: `url(${bgImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
+    <main>
+      <section
+        className="page-hero"
+        style={{ backgroundImage: `url(${bgImage})` }}
       >
-        <div className="absolute inset-0 bg-black/70"></div>
-
-        <div className="relative z-10 max-w-3xl px-6">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Recent Projects
-          </h2>
-          <p className="text-lg md:text-xl text-gray-300 font-medium max-w-2xl mx-auto leading-relaxed">
-            A showcase of my recent work, highlighting full-stack development,
-            UI design, and modern web technologies.
+        <div className="page-shell max-w-4xl text-center">
+          <span className="eyebrow mx-auto">Selected Work</span>
+          <h1 className="section-title mt-6">Projects with purpose and polish.</h1>
+          <p className="section-copy mx-auto mt-6 max-w-3xl">
+            A collection of web and mobile projects showing UI design,
+            application structure, and practical development across different
+            domains.
           </p>
         </div>
-      </div>
+      </section>
 
-      {/* ================= PROJECT CARDS ================= */}
-      <div className="bg-[#0f172a] py-20">
-        <div className="max-w-6xl mx-auto px-6">
-
-          <div className="grid md:grid-cols-3 gap-8">
-
+      <section className="section-pad">
+        <div className="page-shell">
+          <div className="grid gap-6 md:grid-cols-2">
             {projects.map((project, index) => (
-              <div
-                key={index}
-                className="bg-[#111827] rounded-xl overflow-hidden shadow-lg 
-                           hover:-translate-y-3 hover:shadow-blue-500/40 
-                           transition-all duration-300"
+              <article
+                key={project.title}
+                className="glass-panel group overflow-hidden rounded-3xl transition duration-300 hover:-translate-y-1 hover:border-cyan-200/35"
               >
+                <div className="relative aspect-[16/10] overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#041113] via-transparent to-transparent" />
+                  <span className="absolute left-5 top-5 rounded-full border border-white/15 bg-[#041113]/75 px-3 py-1 text-xs font-black text-cyan-100 backdrop-blur">
+                    {project.type}
+                  </span>
+                  <span className="absolute bottom-5 left-5 text-sm font-black text-white/70">
+                    0{index + 1}
+                  </span>
+                </div>
 
-                {/* Project Image */}
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-56 object-cover"
-                />
-
-                {/* Content */}
                 <div className="p-6">
-
-                  {/* Title + Github */}
-                  <div className="flex justify-between items-center mb-3">
-                    <h3 className="text-xl font-semibold text-white">
+                  <div className="flex items-start justify-between gap-4">
+                    <h2 className="text-2xl font-black text-white">
                       {project.title}
-                    </h3>
-
+                    </h2>
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-white transition"
+                      className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-white/15 bg-white/[0.06] text-white transition hover:border-cyan-200 hover:text-cyan-200"
+                      aria-label={`${project.title} GitHub repository`}
                     >
-                      <FaGithub size={20} />
+                      <FaGithub />
                     </a>
                   </div>
 
-                  {/* Description */}
-                  <p className="text-gray-400 text-sm mb-4 leading-relaxed">
+                  <p className="mt-4 text-sm leading-7 text-slate-300">
                     {project.description}
                   </p>
 
-                  {/* Tech Used */}
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech, i) => (
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {project.tech.map((tech) => (
                       <span
-                        key={i}
-                        className="bg-gray-800 text-gray-300 px-3 py-1 text-xs rounded-md"
+                        key={tech}
+                        className="rounded-full border border-white/10 bg-white/[0.06] px-3 py-2 text-xs font-bold text-slate-200"
                       >
                         {tech}
                       </span>
                     ))}
                   </div>
 
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-6 inline-flex items-center gap-2 text-sm font-black text-cyan-200 transition hover:text-lime-200"
+                  >
+                    Explore repository <FaArrowUpRightFromSquare />
+                  </a>
                 </div>
-              </div>
+              </article>
             ))}
-
           </div>
-
         </div>
-      </div>
-
-    </section>
+      </section>
+    </main>
   );
 }

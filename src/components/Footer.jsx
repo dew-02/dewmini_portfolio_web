@@ -1,110 +1,156 @@
-// src/components/Footer.jsx
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaEnvelope, FaWhatsapp, FaArrowUp, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
-import { SiGmail } from "react-icons/si";
+import React, { useEffect, useState } from "react";
+import { motion as Motion } from "framer-motion";
+import {
+  FaArrowUp,
+  FaEnvelope,
+  FaGithub,
+  FaLinkedin,
+  FaMapMarkerAlt,
+  FaPhone,
+} from "react-icons/fa";
 
-const Footer = () => {
+const quickLinks = [
+  { label: "Home", href: "#/" },
+  { label: "About", href: "#/about" },
+  { label: "Skills", href: "#/skills" },
+  { label: "Projects", href: "#/projects" },
+  { label: "Contact", href: "#/contact" },
+];
+
+const contact = {
+  email: "dewminichalakshana456@gmail.com",
+  phone: "+94 70 185 6794",
+  phoneLink: "+94701856794",
+  address: "Katugastota, Sri Lanka",
+  github: "https://github.com/dew-02",
+  linkedin: "https://www.linkedin.com/in/dewmini-jayasinghe-b9308b31a",
+};
+
+export default function Footer() {
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const currentYear = new Date().getFullYear();
 
-  const contactDetails = {
-    email: "dewminichalakshana456@gmail.com",
-    phone: "+94 70 185 6794",
-    phoneLink: "+94701856794",
-    address: "No: 70/1,Pallethalawinna,katugastota, Sri Lanka",
-    github: "https://github.com/dew-02",
-    linkedin: "https://www.linkedin.com/in/dewmini-jayasinghe-b9308b31a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    
-  };
+  useEffect(() => {
+    const handleScroll = () => setShowScrollTop(window.scrollY > 320);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  useEffect(() => {
-    const handleScroll = () => setShowScrollTop(window.scrollY > 300);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const handleSocialClick = (url) => window.open(url, "_blank");
-  const handleEmailClick = () => (window.location.href = `mailto:${contactDetails.email}`);
-  const handleWhatsAppClick = () => window.open(contactDetails.whatsapp, "_blank");
-  const handlePhoneClick = () => (window.location.href = `tel:${contactDetails.phoneLink}`);
-
-  const currentYear = new Date().getFullYear();
-
   return (
     <>
-      {/* Scroll to Top Button */}
       {showScrollTop && (
-        <motion.button
+        <Motion.button
+          type="button"
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white p-4 rounded-full shadow-2xl transition-all duration-300"
-          initial={{ opacity: 0, scale: 0 }}
+          className="fixed bottom-6 right-6 z-50 grid h-12 w-12 place-items-center rounded-full bg-cyan-200 text-[#041113] shadow-2xl shadow-cyan-950/40 transition hover:bg-lime-200"
+          initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0 }}
-          whileHover={{ scale: 1.1, y: -5 }}
-          whileTap={{ scale: 0.9 }}
+          whileHover={{ y: -3 }}
           aria-label="Scroll to top"
         >
-          <FaArrowUp className="text-xl" />
-        </motion.button>
+          <FaArrowUp />
+        </Motion.button>
       )}
 
-      {/* Footer */}
-      <footer className="bg-gradient-to-br from-slate-900 to-slate-800 text-slate-200 border-t border-slate-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* About */}
+      <footer className="border-t border-white/10 bg-[#041113]/88 py-12 backdrop-blur">
+        <div className="page-shell grid gap-10 md:grid-cols-[1.2fr_0.8fr_1fr_0.8fr]">
           <div>
-            <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Dewmini Chalakshana</h3>
-            <p className="text-slate-400 text-sm leading-relaxed mb-4">
-              Full Stack Developer (MERN Stack). Passionate about building scalable web and mobile apps.
+            <a href="#/" className="flex items-center gap-3">
+              <img
+                src="/logome.png"
+                alt="Dewmini logo"
+                className="h-12 w-12 rounded-2xl border border-white/15 bg-white/8 p-1"
+              />
+              <div>
+                <h2 className="text-xl font-black text-white">
+                  Dewmini Chalakshana
+                </h2>
+                <p className="text-sm font-semibold text-cyan-100/70">
+                  Aspiring Full-Stack Developer
+                </p>
+              </div>
+            </a>
+            <p className="mt-5 max-w-sm text-sm leading-7 text-slate-400">
+              Building clean, responsive web and mobile experiences with a
+              practical full-stack mindset.
             </p>
-            <div className="space-y-2 text-sm text-slate-400">
-              <div className="flex items-center space-x-2"><FaMapMarkerAlt className="text-blue-400" /><span>{contactDetails.address}</span></div>
-              <div className="flex items-center space-x-2"><FaPhone className="text-blue-400" /><span>{contactDetails.phone}</span></div>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-black uppercase tracking-[0.18em] text-white">
+              Explore
+            </h3>
+            <div className="mt-5 grid gap-3">
+              {quickLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm font-semibold text-slate-400 transition hover:text-cyan-200"
+                >
+                  {link.label}
+                </a>
+              ))}
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-white">Quick Links</h4>
-            <ul className="space-y-2 text-slate-400 text-sm">
-              {["Home", "About", "Skills", "Projects", "Contact"].map((item, idx) => (
-                <li key={idx}>{item}</li>
-              ))}
-            </ul>
+            <h3 className="text-sm font-black uppercase tracking-[0.18em] text-white">
+              Contact
+            </h3>
+            <div className="mt-5 grid gap-3 text-sm font-semibold text-slate-400">
+              <a
+                href={`mailto:${contact.email}`}
+                className="flex items-center gap-3 transition hover:text-cyan-200"
+              >
+                <FaEnvelope className="text-cyan-200" /> {contact.email}
+              </a>
+              <a
+                href={`tel:${contact.phoneLink}`}
+                className="flex items-center gap-3 transition hover:text-cyan-200"
+              >
+                <FaPhone className="text-cyan-200" /> {contact.phone}
+              </a>
+              <span className="flex items-center gap-3">
+                <FaMapMarkerAlt className="text-cyan-200" /> {contact.address}
+              </span>
+            </div>
           </div>
 
-          {/* Contact */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-white">Contact</h4>
-            <ul className="space-y-2 text-slate-400 text-sm">
-              <li className="flex items-center gap-2 cursor-pointer" onClick={handleEmailClick}><FaEnvelope className="text-blue-400" /> {contactDetails.email}</li>
-              <li className="flex items-center gap-2 cursor-pointer" onClick={handlePhoneClick}><FaPhone className="text-blue-400" /> {contactDetails.phone}</li>
-            </ul>
-          </div>
-
-          {/* Social */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4 text-white">Connect</h4>
-            <div className="flex gap-3">
-              <button onClick={() => handleSocialClick(contactDetails.github)} className="p-3 bg-slate-800 rounded-lg hover:bg-blue-600 text-white"><FaGithub /></button>
-              <button onClick={() => handleSocialClick(contactDetails.linkedin)} className="p-3 bg-slate-800 rounded-lg hover:bg-blue-600 text-white"><FaLinkedin /></button>
-              <button onClick={handleEmailClick} className="p-3 bg-slate-800 rounded-lg hover:bg-red-500 text-white"><SiGmail /></button>
-              <button onClick={handleWhatsAppClick} className="p-3 bg-slate-800 rounded-lg hover:bg-green-500 text-white"><FaWhatsapp /></button>
+            <h3 className="text-sm font-black uppercase tracking-[0.18em] text-white">
+              Social
+            </h3>
+            <div className="mt-5 flex gap-3">
+              <a
+                href={contact.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="grid h-11 w-11 place-items-center rounded-full border border-white/12 bg-white/[0.06] text-white transition hover:border-cyan-200 hover:text-cyan-200"
+                aria-label="GitHub"
+              >
+                <FaGithub />
+              </a>
+              <a
+                href={contact.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="grid h-11 w-11 place-items-center rounded-full border border-white/12 bg-white/[0.06] text-white transition hover:border-cyan-200 hover:text-cyan-200"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin />
+              </a>
             </div>
           </div>
         </div>
 
-        {/* Bottom */}
-        <div className="mt-12 pt-6 border-t border-slate-700 text-center text-slate-400 text-sm">
-          © {currentYear} <span className="text-blue-400 font-semibold">Dewmini Chalakshana</span>. All rights reserved. 
+        <div className="page-shell mt-10 border-t border-white/10 pt-6 text-center text-sm font-semibold text-slate-500">
+          © {currentYear} Dewmini Chalakshana. All rights reserved.
         </div>
       </footer>
     </>
   );
-};
-
-export default Footer;
+}

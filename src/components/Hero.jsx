@@ -1,98 +1,114 @@
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import mePhoto from "../assets/me.jpeg"; 
+import { FaArrowRight, FaGithub, FaLinkedin, FaReact } from "react-icons/fa";
+import { SiTailwindcss, SiNodedotjs, SiMongodb } from "react-icons/si";
+import mePhoto from "../assets/me.jpeg";
 
+const highlights = [
+  { value: "MERN", label: "Stack focus" },
+  { value: "8+", label: "Tools explored" },
+  { value: "2023", label: "IT journey" },
+];
+
+const tech = [
+  { icon: <FaReact />, label: "React" },
+  { icon: <SiTailwindcss />, label: "Tailwind" },
+  { icon: <SiNodedotjs />, label: "Node" },
+  { icon: <SiMongodb />, label: "MongoDB" },
+];
 
 export default function Hero() {
   return (
-    <section
-      id="home"
-      className="relative min-h-screen pt-20 pb-20 flex items-center overflow-hidden bg-[#020617]"
-    >
-      <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-10">
-          
-          {/* Text content */}
-          <div className="flex-1 text-center lg:text-left">
+    <main className="relative min-h-screen overflow-hidden pt-20">
+      <section className="page-shell grid min-h-[calc(100vh-80px)] items-center gap-14 py-16 lg:grid-cols-[1.04fr_0.96fr]">
+        <div>
+          <span className="eyebrow">Available for internship opportunities</span>
 
-            <h1 className="text-5xl md:text-4xl lg:text-5xl font-black text-white tracking-tighter mb-4 leading-tight">
-              Hi !   I’m 
-              Dewmini <span className="text-accent"></span>
-            </h1>
+          <h1 className="mt-8 max-w-3xl text-[clamp(3rem,8vw,6.9rem)] font-black leading-[0.9] text-white">
+            Dewmini <span className="accent-text">Chalakshana</span>
+          </h1>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-purple-500 mb-6">
-              Aspiring Web Developer
-            </h2>
+          <p className="mt-7 max-w-2xl text-xl font-semibold leading-8 text-cyan-50/88 md:text-2xl">
+            Aspiring full-stack developer crafting clean, responsive, and
+            human-friendly digital experiences.
+          </p>
 
-            <p className="text-gray-400 text-lg md:text-xl leading-relaxed mb-10 max-w-xl mx-auto lg:mx-0">
-              An aspiring Full-Stack Developer dedicated to creating scalable web
-              applications, writing clean code, and continuously improving through
-              real-world projects.
-            </p>
+          <p className="section-copy mt-5 max-w-2xl">
+            I enjoy turning ideas into polished web applications with React,
+            Tailwind CSS, Node.js, and thoughtful UI details that make a project
+            feel calm, modern, and easy to use.
+          </p>
 
-            <div className="flex flex-col sm:flex-row items-center gap-6 justify-center lg:justify-start">
-              
-              {/* Contact Button */}
-              <a
-             href="#contact"
-              className="px-10 py-4 bg-blue-600 hover:bg-blue-700 text-white text-xs font-black tracking-widest rounded-full transition-all shadow-lg hover:scale-105 active:scale-95"
-              >
-            GET IN TOUCH
+          <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+            <a href="#/projects" className="primary-button">
+              View Projects <FaArrowRight />
             </a>
-                
-                
-              
-
-              {/* Social Icons */}
-              <div className="flex items-center gap-4">
-
-                <a
-                  href="https://github.com/dew-02"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 text-gray-400 hover:text-white hover:border-white hover:bg-white/10 transition-all duration-300 hover:scale-110"
-                >
-                  <FaGithub size={20} />
-                </a>
-
-                <a
-                  href="https://www.linkedin.com/in/dewmini-jayasinghe-b9308b31a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 text-gray-400 hover:text-blue-400 hover:border-blue-400 hover:bg-blue-400/10 transition-all duration-300 hover:scale-110"
-                >
-                  <FaLinkedin size={20} />
-                </a>
-
-              </div>
-            </div>
+            <a href="#/contact" className="secondary-button">
+              Get In Touch
+            </a>
           </div>
-        
-              {/* Hero image / floating circles */}
-          <div className="flex-1 relative">
-            <div className="relative w-[320px] h-[320px] md:w-[500px] md:h-[500px] mx-auto flex items-center justify-center">
-              {/* Smaller dark circles */}
-              <div className="absolute inset-0 border-[1px] border-black/50 rounded-full animate-spin-slow"></div>
-              <div className="absolute inset-[20%] border-[2px] border-dashed border-black/30 rounded-full animate-reverse-spin"></div>
 
-              {/* Hero image */}
-              <div className="relative w-[80%] h-[80%] rounded-full overflow-hidden border-4 border-white/10 shadow-[0_0_50px_rgba(56,189,248,0.2)] flex items-center justify-center bg-[#0a0a0a]">
-                <div className="absolute inset-0 bg-gradient-to-b from-accent/10 via-transparent to-transparent opacity-50"></div>
-                <img
-                  src={mePhoto}
-                  alt="Dewmini"
-                  className="object-cover transition-transform duration-1000 hover:scale-110"
-                />
-              </div>
-            </div>
+          <div className="mt-9 flex items-center gap-4">
+            <a
+              href="https://github.com/dew-02"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="grid h-12 w-12 place-items-center rounded-full border border-white/15 bg-white/7 text-xl text-white transition hover:border-cyan-200 hover:text-cyan-200"
+              aria-label="GitHub"
+            >
+              <FaGithub />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/dewmini-jayasinghe-b9308b31a"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="grid h-12 w-12 place-items-center rounded-full border border-white/15 bg-white/7 text-xl text-white transition hover:border-cyan-200 hover:text-cyan-200"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin />
+            </a>
           </div>
         </div>
-      </div>
 
-                  
+        <div className="relative">
+          <div className="glass-panel relative mx-auto max-w-[520px] overflow-hidden rounded-[2rem] p-4">
+            <div className="absolute right-6 top-6 z-10 rounded-full border border-white/15 bg-[#061014]/80 px-4 py-2 text-sm font-black text-cyan-100 backdrop-blur">
+              Portfolio 2026
+            </div>
+            <div className="aspect-[4/5] overflow-hidden rounded-[1.4rem] bg-cyan-100/10">
+              <img
+                src={mePhoto}
+                alt="Dewmini Chalakshana"
+                className="h-full w-full object-cover object-center"
+              />
+            </div>
+            <div className="mt-4 grid grid-cols-3 gap-3">
+              {highlights.map((item) => (
+                <div
+                  key={item.label}
+                  className="rounded-2xl border border-white/10 bg-white/[0.06] p-4 text-center"
+                >
+                  <p className="text-xl font-black text-white">{item.value}</p>
+                  <p className="mt-1 text-xs font-semibold text-slate-300">
+                    {item.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
 
-    </section>
-    
-    
+          <div className="mx-auto mt-5 flex max-w-[520px] flex-wrap justify-center gap-3">
+            {tech.map((item) => (
+              <span
+                key={item.label}
+                className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.07] px-4 py-2 text-sm font-bold text-slate-100"
+              >
+                <span className="text-cyan-200">{item.icon}</span>
+                {item.label}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
