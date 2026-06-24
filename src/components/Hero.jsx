@@ -21,7 +21,7 @@ export default function Hero() {
     <main className="relative min-h-screen overflow-hidden pt-20">
       <section className="page-shell grid min-h-[calc(100vh-80px)] items-center gap-14 py-16 lg:grid-cols-[1.04fr_0.96fr]">
         <div>
-          <span className="eyebrow">Available for internship opportunities</span>
+          <span className="eyebrow">Available for work</span>
 
           <h1 className="mt-8 max-w-3xl text-[clamp(3rem,8vw,6.9rem)] font-black leading-[0.9] text-white">
             Dewmini <span className="accent-text">Chalakshana</span>

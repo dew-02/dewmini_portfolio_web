@@ -1,5 +1,4 @@
 import { motion as Motion } from "framer-motion";
-import { FaGraduationCap, FaLaptopCode, FaMapMarkerAlt } from "react-icons/fa";
 import uniImg from "../assets/uni.png";
 import schoolImg from "../assets/school.jpg";
 import openuniImg from "../assets/openuni.png";
@@ -64,7 +63,7 @@ export default function About() {
       </section>
 
       <section className="section-pad">
-        <div className="page-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="page-shell max-w-4xl">
           <Motion.div
             initial={{ opacity: 0, y: 28 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -98,47 +97,6 @@ export default function About() {
               can learn from experienced developers and contribute to meaningful
               projects.
             </p>
-          </Motion.div>
-
-          <Motion.div
-            className="grid gap-4 sm:grid-cols-3"
-            initial={{ opacity: 0, y: 28 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            {[
-              {
-                icon: <FaLaptopCode />,
-                title: "Full-Stack",
-                copy: "MERN stack, REST APIs, clean UI, and scalable web apps.",
-              },
-              {
-                icon: <FaGraduationCap />,
-                title: "IT Student",
-                copy: "Studying at SLIIT with focus on software and web systems.",
-              },
-              {
-                icon: <FaMapMarkerAlt />,
-                title: "Sri Lanka",
-                copy: "Open to internships, collaboration, and real-world projects.",
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="glass-panel rounded-3xl p-6 transition hover:-translate-y-1"
-              >
-                <div className="grid h-12 w-12 place-items-center rounded-2xl bg-blue-500/12 text-xl text-blue-300">
-                  {item.icon}
-                </div>
-                <h3 className="mt-5 text-xl font-black text-white">
-                  {item.title}
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-slate-300">
-                  {item.copy}
-                </p>
-              </div>
-            ))}
           </Motion.div>
         </div>
       </section>
@@ -222,7 +180,7 @@ export default function About() {
                 Actively Seeking
               </span>
               <h3 className="mt-6 text-3xl font-black text-white">
-                Internship in full-stack development
+                Internship opportunities
               </h3>
               <p className="section-copy mt-5">
                 Embarking on my first professional internship, I am ready to
