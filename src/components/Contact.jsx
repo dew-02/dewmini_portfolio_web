@@ -91,7 +91,7 @@ export default function Contact() {
               {contactItems.map((item) => {
                 const content = (
                   <>
-                    <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-cyan-300/12 text-cyan-200">
+                    <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-blue-500/12 text-blue-300">
                       {item.icon}
                     </div>
                     <div>
@@ -109,7 +109,7 @@ export default function Contact() {
                   <a
                     key={item.label}
                     href={item.href}
-                    className="flex items-center gap-4 rounded-3xl border border-white/10 bg-white/[0.05] p-4 transition hover:border-cyan-200/35"
+                    className="flex items-center gap-4 rounded-3xl border border-white/10 bg-white/[0.05] p-4 transition hover:border-blue-300/35"
                   >
                     {content}
                   </a>
@@ -139,9 +139,9 @@ export default function Contact() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="glass-panel rounded-3xl p-6 transition hover:-translate-y-1 hover:border-cyan-200/35"
+                className="glass-panel rounded-3xl p-6 transition hover:-translate-y-1 hover:border-blue-300/35"
               >
-                <div className="grid h-12 w-12 place-items-center rounded-2xl bg-white/[0.07] text-2xl text-cyan-100">
+                <div className="grid h-12 w-12 place-items-center rounded-2xl bg-white/[0.07] text-2xl text-blue-100">
                   {social.icon}
                 </div>
                 <h3 className="mt-6 text-2xl font-black text-white">

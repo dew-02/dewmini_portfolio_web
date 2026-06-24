@@ -13,7 +13,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-[#041113]/82 backdrop-blur-2xl">
+    <nav className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-gradient-to-r from-blue-950/92 via-black/90 to-gray-900/92 backdrop-blur-2xl">
       <div className="page-shell flex h-20 items-center justify-between">
         <a href="#/" className="group flex items-center gap-3">
           <img
@@ -25,7 +25,7 @@ export default function Navbar() {
             <span className="block text-sm font-black uppercase tracking-[0.22em] text-white">
               Dewmini
             </span>
-            <span className="block text-xs font-semibold text-cyan-100/70">
+            <span className="block text-xs font-semibold text-blue-100/75">
               Full-Stack Developer
             </span>
           </span>
@@ -36,7 +36,7 @@ export default function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="block rounded-full px-4 py-2 text-sm font-bold text-slate-200 transition hover:bg-white/10 hover:text-cyan-200"
+                className="block rounded-full px-4 py-2 text-sm font-bold text-slate-200 transition hover:bg-white/10 hover:text-blue-300"
               >
                 {link.label}
               </a>
@@ -59,7 +59,7 @@ export default function Navbar() {
       </div>
 
       {isOpen && (
-        <div className="border-t border-white/10 bg-[#061014]/96 px-4 py-4 md:hidden">
+        <div className="border-t border-white/10 bg-[#0f172a]/96 px-4 py-4 md:hidden">
           <div className="mx-auto flex max-w-sm flex-col gap-2">
             {links.map((link) => (
               <a

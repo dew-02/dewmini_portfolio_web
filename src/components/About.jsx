@@ -12,9 +12,9 @@ const education = [
     date: "2023 - Present",
     image: uniImg,
     badge: "Current",
-    accent: "cyan",
+    accent: "blue",
     details:
-      "Studying software engineering, full-stack development, databases, networking, cloud technologies, and cybersecurity.",
+      "Studying software engineering, full-stack development, databases, networking, cloud technologies, and cybersecurity while building practical web applications through coursework and projects.",
     tags: ["Web Development", "Databases", "Programming", "Networking"],
   },
   {
@@ -22,7 +22,7 @@ const education = [
     place: "St. Anthony's Girls' College Kandy",
     date: "2020 - 2022",
     image: schoolImg,
-    accent: "rose",
+    accent: "purple",
     details:
       "Completed the Physical Science stream, building a strong analytical and mathematical foundation for IT studies.",
     tags: ["Mathematics", "Physics", "Chemistry"],
@@ -32,17 +32,17 @@ const education = [
     place: "Open University of Sri Lanka",
     date: "2023",
     image: openuniImg,
-    accent: "lime",
+    accent: "yellow",
     details:
-      "Gained foundational IT knowledge including computer hardware, operating systems, and office productivity tools.",
+      "Gained foundational knowledge in IT including computer hardware, operating systems, and MS Office applications.",
     tags: ["MS Word", "MS Excel", "MS PowerPoint", "Hardware"],
   },
 ];
 
 const accentClasses = {
-  cyan: "border-cyan-300/40 text-cyan-200 bg-cyan-300/10",
-  rose: "border-rose-300/40 text-rose-200 bg-rose-300/10",
-  lime: "border-lime-300/40 text-lime-200 bg-lime-300/10",
+  blue: "border-blue-400/40 text-blue-300 bg-blue-500/10",
+  purple: "border-purple-400/40 text-purple-300 bg-purple-500/10",
+  yellow: "border-yellow-400/40 text-yellow-300 bg-yellow-500/10",
 };
 
 export default function About() {
@@ -56,9 +56,9 @@ export default function About() {
           <span className="eyebrow mx-auto">About Me</span>
           <h1 className="section-title mt-6">Curious builder, thoughtful learner.</h1>
           <p className="section-copy mx-auto mt-6 max-w-3xl">
-            I am Dewmini Chalakshana, an Information Technology student at
-            SLIIT with a love for clean interfaces, practical systems, and
-            continuous learning through real projects.
+            I am Dewmini Chalakshana, a BSc in Information Technology student
+            at SLIIT, passionate about creating elegant solutions and building
+            modern web applications while continuously growing my skills.
           </p>
         </div>
       </section>
@@ -74,15 +74,29 @@ export default function About() {
             <span className="eyebrow">My Journey</span>
             <h2 className="section-title mt-5">From curiosity to craft.</h2>
             <p className="section-copy mt-6">
-              My software journey started with wanting to understand how web
-              applications work. Coursework, practice projects, and team
-              assignments helped me grow from basic pages into full-stack
-              thinking with React, Node.js, databases, and deployment basics.
+              Hello! I'm Dewmini Chalakshana, a BSc in Information Technology
+              student at Sri Lanka Institute of Information Technology (SLIIT),
+              passionate about full-stack web development and DevOps practices.
             </p>
             <p className="section-copy mt-5">
-              I am currently seeking internship opportunities where I can learn
-              from experienced developers, contribute to useful products, and
-              keep improving my engineering habits.
+              My journey into software development started with curiosity about
+              how web applications work. Through coursework and hands-on
+              projects, I've built several functional web applications across
+              different domains, each strengthening my problem-solving and
+              development skills, ranging from e-commerce platforms to real-time
+              collaboration tools.
+            </p>
+            <p className="section-copy mt-5">
+              I specialize in the MERN stack (MongoDB, Express.js, React.js,
+              Node.js) and am actively exploring DevOps tools and methodologies
+              including Docker, CI/CD pipelines, and deployment automation.
+            </p>
+            <p className="section-copy mt-5">
+              I'm eager to apply my knowledge in professional settings,
+              contribute to real-world projects, and continue growing as a
+              developer. I am currently seeking internship opportunities where I
+              can learn from experienced developers and contribute to meaningful
+              projects.
             </p>
           </Motion.div>
 
@@ -97,24 +111,24 @@ export default function About() {
               {
                 icon: <FaLaptopCode />,
                 title: "Full-Stack",
-                copy: "React, Node.js, Express, MongoDB, and REST APIs.",
+                copy: "MERN stack, REST APIs, clean UI, and scalable web apps.",
               },
               {
                 icon: <FaGraduationCap />,
                 title: "IT Student",
-                copy: "Building foundations in software, cloud, and security.",
+                copy: "Studying at SLIIT with focus on software and web systems.",
               },
               {
                 icon: <FaMapMarkerAlt />,
                 title: "Sri Lanka",
-                copy: "Open to internships, collaboration, and learning.",
+                copy: "Open to internships, collaboration, and real-world projects.",
               },
             ].map((item) => (
               <div
                 key={item.title}
                 className="glass-panel rounded-3xl p-6 transition hover:-translate-y-1"
               >
-                <div className="grid h-12 w-12 place-items-center rounded-2xl bg-cyan-300/12 text-xl text-cyan-200">
+                <div className="grid h-12 w-12 place-items-center rounded-2xl bg-blue-500/12 text-xl text-blue-300">
                   {item.icon}
                 </div>
                 <h3 className="mt-5 text-xl font-black text-white">
@@ -165,7 +179,7 @@ export default function About() {
                           <h3 className="text-xl font-black text-white">
                             {item.title}
                           </h3>
-                          <p className="mt-1 font-semibold text-cyan-100/80">
+                          <p className="mt-1 font-semibold text-blue-100/80">
                             {item.place}
                           </p>
                           <p className="mt-1 text-sm text-slate-400">
@@ -173,7 +187,7 @@ export default function About() {
                           </p>
                         </div>
                         {item.badge && (
-                          <span className="rounded-full bg-lime-300/12 px-3 py-1 text-xs font-black text-lime-200">
+                          <span className="rounded-full bg-green-500/12 px-3 py-1 text-xs font-black text-green-300">
                             {item.badge}
                           </span>
                         )}
@@ -204,16 +218,17 @@ export default function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <span className="rounded-full bg-cyan-300/12 px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-cyan-100">
+              <span className="rounded-full bg-blue-500/12 px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-blue-100">
                 Actively Seeking
               </span>
               <h3 className="mt-6 text-3xl font-black text-white">
                 Internship in full-stack development
               </h3>
               <p className="section-copy mt-5">
-                I am ready to support real projects, learn production workflows,
-                collaborate with teams, and strengthen my skills in frontend,
-                backend, databases, and DevOps foundations.
+                Embarking on my first professional internship, I am ready to
+                apply academic knowledge to real-world projects, collaborate
+                with industry experts, and gain hands-on experience in
+                full-stack software development.
               </p>
               <a href="#/contact" className="primary-button mt-7">
                 Contact Me

@@ -46,7 +46,7 @@ export default function Footer() {
         <Motion.button
           type="button"
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 z-50 grid h-12 w-12 place-items-center rounded-full bg-cyan-200 text-[#041113] shadow-2xl shadow-cyan-950/40 transition hover:bg-lime-200"
+          className="fixed bottom-6 right-6 z-50 grid h-12 w-12 place-items-center rounded-full bg-blue-600 text-white shadow-2xl shadow-blue-950/40 transition hover:bg-purple-600"
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
           whileHover={{ y: -3 }}
@@ -56,7 +56,7 @@ export default function Footer() {
         </Motion.button>
       )}
 
-      <footer className="border-t border-white/10 bg-[#041113]/88 py-12 backdrop-blur">
+      <footer className="border-t border-white/10 bg-[#0f172a]/88 py-12 backdrop-blur">
         <div className="page-shell grid gap-10 md:grid-cols-[1.2fr_0.8fr_1fr_0.8fr]">
           <div>
             <a href="#/" className="flex items-center gap-3">
@@ -69,7 +69,7 @@ export default function Footer() {
                 <h2 className="text-xl font-black text-white">
                   Dewmini Chalakshana
                 </h2>
-                <p className="text-sm font-semibold text-cyan-100/70">
+                <p className="text-sm font-semibold text-blue-100/70">
                   Aspiring Full-Stack Developer
                 </p>
               </div>
@@ -89,7 +89,7 @@ export default function Footer() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-sm font-semibold text-slate-400 transition hover:text-cyan-200"
+                  className="text-sm font-semibold text-slate-400 transition hover:text-blue-300"
                 >
                   {link.label}
                 </a>
@@ -104,18 +104,18 @@ export default function Footer() {
             <div className="mt-5 grid gap-3 text-sm font-semibold text-slate-400">
               <a
                 href={`mailto:${contact.email}`}
-                className="flex items-center gap-3 transition hover:text-cyan-200"
+                className="flex items-center gap-3 transition hover:text-blue-300"
               >
-                <FaEnvelope className="text-cyan-200" /> {contact.email}
+                <FaEnvelope className="text-blue-300" /> {contact.email}
               </a>
               <a
                 href={`tel:${contact.phoneLink}`}
-                className="flex items-center gap-3 transition hover:text-cyan-200"
+                className="flex items-center gap-3 transition hover:text-blue-300"
               >
-                <FaPhone className="text-cyan-200" /> {contact.phone}
+                <FaPhone className="text-blue-300" /> {contact.phone}
               </a>
               <span className="flex items-center gap-3">
-                <FaMapMarkerAlt className="text-cyan-200" /> {contact.address}
+                <FaMapMarkerAlt className="text-blue-300" /> {contact.address}
               </span>
             </div>
           </div>
@@ -129,7 +129,7 @@ export default function Footer() {
                 href={contact.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="grid h-11 w-11 place-items-center rounded-full border border-white/12 bg-white/[0.06] text-white transition hover:border-cyan-200 hover:text-cyan-200"
+                className="grid h-11 w-11 place-items-center rounded-full border border-white/12 bg-white/[0.06] text-white transition hover:border-blue-300 hover:text-blue-300"
                 aria-label="GitHub"
               >
                 <FaGithub />
@@ -138,7 +138,7 @@ export default function Footer() {
                 href={contact.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="grid h-11 w-11 place-items-center rounded-full border border-white/12 bg-white/[0.06] text-white transition hover:border-cyan-200 hover:text-cyan-200"
+                className="grid h-11 w-11 place-items-center rounded-full border border-white/12 bg-white/[0.06] text-white transition hover:border-blue-300 hover:text-blue-300"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin />

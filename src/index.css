@@ -1,20 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  color: #edf6ff;
-  background: #061014;
+  color: #f8fafc;
+  background: #020617;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  --ink: #071014;
-  --panel: rgba(10, 24, 30, 0.78);
+  --ink: #020617;
+  --panel: rgba(17, 24, 39, 0.8);
   --line: rgba(255, 255, 255, 0.12);
-  --cyan: #5eead4;
-  --blue: #60a5fa;
-  --coral: #fb7185;
-  --lime: #bef264;
+  --blue: #38bdf8;
+  --indigo: #2563eb;
+  --purple: #a855f7;
+  --green: #22c55e;
+  --yellow: #eab308;
 }
 
 * {
@@ -30,10 +31,10 @@ body {
   min-height: 100vh;
   margin: 0;
   background:
-    radial-gradient(circle at 8% 10%, rgba(94, 234, 212, 0.16), transparent 28%),
-    radial-gradient(circle at 88% 8%, rgba(251, 113, 133, 0.14), transparent 24%),
-    linear-gradient(135deg, #041113 0%, #0b1720 46%, #111827 100%);
-  color: #edf6ff;
+    radial-gradient(circle at 8% 10%, rgba(37, 99, 235, 0.22), transparent 28%),
+    radial-gradient(circle at 88% 8%, rgba(168, 85, 247, 0.18), transparent 24%),
+    linear-gradient(135deg, #020617 0%, #0f172a 48%, #111827 100%);
+  color: #f8fafc;
 }
 
 body::before {
@@ -76,7 +77,7 @@ img {
 
 .glass-panel {
   border: 1px solid var(--line);
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.035));
+  background: linear-gradient(145deg, rgba(17, 24, 39, 0.9), rgba(15, 23, 42, 0.66));
   box-shadow: 0 22px 70px rgba(0, 0, 0, 0.28);
   backdrop-filter: blur(18px);
 }
@@ -86,11 +87,11 @@ img {
   align-items: center;
   gap: 8px;
   width: fit-content;
-  border: 1px solid rgba(94, 234, 212, 0.34);
+  border: 1px solid rgba(56, 189, 248, 0.34);
   border-radius: 999px;
   padding: 8px 12px;
-  color: #bffdf3;
-  background: rgba(94, 234, 212, 0.08);
+  color: #bfdbfe;
+  background: rgba(59, 130, 246, 0.1);
   font-size: 0.76rem;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -105,13 +106,13 @@ img {
 }
 
 .section-copy {
-  color: #b9c8d6;
+  color: #cbd5e1;
   font-size: clamp(1rem, 1.6vw, 1.18rem);
   line-height: 1.8;
 }
 
 .accent-text {
-  background: linear-gradient(90deg, var(--cyan), var(--blue), var(--coral));
+  background: linear-gradient(90deg, var(--blue), var(--indigo), var(--purple));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -133,13 +134,13 @@ img {
 }
 
 .primary-button {
-  color: #041113;
-  background: linear-gradient(135deg, var(--cyan), var(--lime));
-  box-shadow: 0 18px 40px rgba(94, 234, 212, 0.24);
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--indigo), var(--purple));
+  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.3);
 }
 
 .secondary-button {
-  color: #edf6ff;
+  color: #f8fafc;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.06);
 }
@@ -165,8 +166,8 @@ img {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(4, 17, 19, 0.92), rgba(4, 17, 19, 0.58)),
-    linear-gradient(to top, rgba(4, 17, 19, 1), transparent 62%);
+    linear-gradient(90deg, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.6)),
+    linear-gradient(to top, rgba(15, 23, 42, 1), transparent 62%);
 }
 
 .page-hero > * {

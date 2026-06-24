@@ -15,55 +15,55 @@ const groups = [
   {
     title: "Programming",
     icon: <FaCode />,
-    accent: "text-cyan-200 bg-cyan-300/12",
+    accent: "text-blue-300 bg-blue-500/12",
     skills: ["C", "C++", "Java", "Python"],
   },
   {
     title: "Frontend",
     icon: <FaLaptopCode />,
-    accent: "text-rose-200 bg-rose-300/12",
+    accent: "text-purple-300 bg-purple-500/12",
     skills: ["HTML5", "CSS3", "JavaScript", "React.js", "Tailwind CSS", "Bootstrap", "Figma"],
   },
   {
     title: "Backend",
     icon: <FaServer />,
-    accent: "text-lime-200 bg-lime-300/12",
+    accent: "text-green-300 bg-green-500/12",
     skills: ["Node.js", "Express.js", "Java", "PHP", "REST APIs"],
   },
   {
     title: "Databases",
     icon: <FaDatabase />,
-    accent: "text-blue-200 bg-blue-300/12",
+    accent: "text-blue-300 bg-blue-500/12",
     skills: ["MySQL", "SQLite", "MongoDB", "ER Diagrams", "Database Design"],
   },
   {
     title: "Mobile",
     icon: <FaMobileAlt />,
-    accent: "text-cyan-200 bg-cyan-300/12",
+    accent: "text-blue-300 bg-blue-500/12",
     skills: ["Android Studio", "Kotlin", "Java"],
   },
   {
     title: "Engineering Basics",
     icon: <FaTools />,
-    accent: "text-rose-200 bg-rose-300/12",
+    accent: "text-purple-300 bg-purple-500/12",
     skills: ["OOP", "Data Structures", "SDLC", "MVC Architecture", "Design Patterns", "Agile"],
   },
   {
     title: "API Testing",
     icon: <SiPostman />,
-    accent: "text-lime-200 bg-lime-300/12",
+    accent: "text-green-300 bg-green-500/12",
     skills: ["Postman", "API Documentation", "Request Testing"],
   },
   {
     title: "Version Control",
     icon: <FaGitAlt />,
-    accent: "text-blue-200 bg-blue-300/12",
+    accent: "text-blue-300 bg-blue-500/12",
     skills: ["Git", "GitHub", "GitHub Desktop", "Branching", "Pull Requests"],
   },
   {
     title: "Tools & IDEs",
     icon: <FaTools />,
-    accent: "text-cyan-200 bg-cyan-300/12",
+    accent: "text-blue-300 bg-blue-500/12",
     skills: ["VS Code", "Eclipse", "IntelliJ IDEA", "Android Studio", "R Studio", "Arduino IDE"],
   },
 ];
@@ -103,7 +103,7 @@ export default function Skills() {
             {groups.map((group) => (
               <article
                 key={group.title}
-                className="glass-panel rounded-3xl p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-200/35"
+                className="glass-panel rounded-3xl p-6 transition duration-300 hover:-translate-y-1 hover:border-blue-300/35"
               >
                 <div className="flex items-center gap-4">
                   <div

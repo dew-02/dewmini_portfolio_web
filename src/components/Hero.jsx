@@ -27,7 +27,7 @@ export default function Hero() {
             Dewmini <span className="accent-text">Chalakshana</span>
           </h1>
 
-          <p className="mt-7 max-w-2xl text-xl font-semibold leading-8 text-cyan-50/88 md:text-2xl">
+          <p className="mt-7 max-w-2xl text-xl font-semibold leading-8 text-blue-50/88 md:text-2xl">
             Aspiring full-stack developer crafting clean, responsive, and
             human-friendly digital experiences.
           </p>
@@ -52,7 +52,7 @@ export default function Hero() {
               href="https://github.com/dew-02"
               target="_blank"
               rel="noopener noreferrer"
-              className="grid h-12 w-12 place-items-center rounded-full border border-white/15 bg-white/7 text-xl text-white transition hover:border-cyan-200 hover:text-cyan-200"
+              className="grid h-12 w-12 place-items-center rounded-full border border-white/15 bg-white/7 text-xl text-white transition hover:border-blue-300 hover:text-blue-300"
               aria-label="GitHub"
             >
               <FaGithub />
@@ -61,7 +61,7 @@ export default function Hero() {
               href="https://www.linkedin.com/in/dewmini-jayasinghe-b9308b31a"
               target="_blank"
               rel="noopener noreferrer"
-              className="grid h-12 w-12 place-items-center rounded-full border border-white/15 bg-white/7 text-xl text-white transition hover:border-cyan-200 hover:text-cyan-200"
+              className="grid h-12 w-12 place-items-center rounded-full border border-white/15 bg-white/7 text-xl text-white transition hover:border-blue-300 hover:text-blue-300"
               aria-label="LinkedIn"
             >
               <FaLinkedin />
@@ -71,10 +71,10 @@ export default function Hero() {
 
         <div className="relative">
           <div className="glass-panel relative mx-auto max-w-[520px] overflow-hidden rounded-[2rem] p-4">
-            <div className="absolute right-6 top-6 z-10 rounded-full border border-white/15 bg-[#061014]/80 px-4 py-2 text-sm font-black text-cyan-100 backdrop-blur">
+            <div className="absolute right-6 top-6 z-10 rounded-full border border-white/15 bg-[#0f172a]/80 px-4 py-2 text-sm font-black text-blue-100 backdrop-blur">
               Portfolio 2026
             </div>
-            <div className="aspect-[4/5] overflow-hidden rounded-[1.4rem] bg-cyan-100/10">
+            <div className="aspect-[4/5] overflow-hidden rounded-[1.4rem] bg-blue-100/10">
               <img
                 src={mePhoto}
                 alt="Dewmini Chalakshana"
@@ -102,7 +102,7 @@ export default function Hero() {
                 key={item.label}
                 className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.07] px-4 py-2 text-sm font-bold text-slate-100"
               >
-                <span className="text-cyan-200">{item.icon}</span>
+                <span className="text-blue-300">{item.icon}</span>
                 {item.label}
               </span>
             ))}
