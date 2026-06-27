@@ -5,13 +5,33 @@ import project1 from "../assets/project1.png";
 import project2 from "../assets/project2.jpeg";
 import project3 from "../assets/project3.png";
 import project4 from "../assets/project4.jpg";
+import project5 from "../assets/project5.png";
+import project6 from "../assets/project6.png";
 
 const projects = [
+  {
+  title: "University Internship Career Management System",
+  image: project5,
+  description:
+    "A full-stack MERN web application designed to manage university internship processes including student registration, profile management, job matching, internship applications, interview scheduling, and application tracking between students and companies.",
+  github: "https://github.com/dew-02/university_internship_career_management_system.git",
+  tech: ["MongoDB", "Express.js", "React.js", "Node.js"],
+  type: "Management System",
+},
+{
+  title: "Smart Campus Operations Hub",
+  image: project6,
+  description:
+    "A full-stack web application designed to modernize university operations by managing facility bookings, resource management, maintenance ticketing, notifications, and role-based access control. The system allows students and staff to book rooms and equipment, report incidents, track requests, and receive real-time updates through a centralized platform.",
+  github: "https://github.com/dew-02/facilities_halls_booking_system.git",
+  tech: ["Spring Boot", "React.js", "MySQL", "Spring Security", "REST API"],
+  type: "Management System",
+},
   {
     title: "Crop Management System",
     image: project1,
     description:
-      "A responsive web application for agricultural product workflows with clean screens, reusable UI pieces, and practical project structure.",
+  "A full-stack Smart Agriculture platform built with the MERN stack that connects farmers, landowners, buyers, and government officers. It supports land bidding, AI-based crop suggestions, crop ordering, resource booking, and government notices in one unified system to improve efficiency and transparency in agriculture.",
     github: "https://github.com/dew-02/Suhuru-Waga-System.git",
     tech: ["JavaScript", "CSS", "HTML"],
     type: "Web App",
@@ -20,7 +40,8 @@ const projects = [
     title: "Online Medical Portal",
     image: project2,
     description:
-      "A medical service portal for managing appointments and patient-facing workflows through a focused dashboard interface.",
+      
+  "A full-stack online medical service portal designed to streamline healthcare workflows by enabling patients to book appointments, manage medical records, and interact with healthcare providers through a centralized dashboard. The system improves efficiency in clinic operations by digitizing patient management, appointment scheduling, and administrative processes in a structured and user-friendly interface.",
     github: "https://github.com/dew-02/online-medical-portal.git",
     tech: ["PHP", "CSS", "JavaScript"],
     type: "Portal",
@@ -65,7 +86,7 @@ export default function Projects() {
 
       <section className="section-pad">
         <div className="page-shell">
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-4">
             {projects.map((project, index) => (
               <article
                 key={project.title}

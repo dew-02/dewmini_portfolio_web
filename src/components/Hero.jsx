@@ -19,11 +19,11 @@ const tech = [
 export default function Hero() {
   return (
     <main className="relative min-h-screen overflow-hidden pt-20">
-      <section className="page-shell grid min-h-[calc(100vh-80px)] items-center gap-14 py-16 lg:grid-cols-[1.04fr_0.96fr]">
+      <section className="page-shell grid min-h-[calc(100vh-80px)] items-center gap-80 py-18 lg:grid-cols-[1.04fr_0.96fr]">
         <div>
           <span className="eyebrow">Available for work</span>
 
-          <h1 className="mt-8 max-w-3xl text-[clamp(3rem,8vw,6.9rem)] font-black leading-[0.9] text-white">
+          <h1 className="mt-6 max-w-2xl text-[clamp(3rem,6vw,6.9rem)] font-black leading-[0.9] text-white">
             Dewmini <span className="accent-text">Chalakshana</span>
           </h1>
 
@@ -71,9 +71,7 @@ export default function Hero() {
 
         <div className="relative">
           <div className="glass-panel relative mx-auto max-w-[520px] overflow-hidden rounded-[2rem] p-4">
-            <div className="absolute right-6 top-6 z-10 rounded-full border border-white/15 bg-[#0f172a]/80 px-4 py-2 text-sm font-black text-blue-100 backdrop-blur">
-              Portfolio 2026
-            </div>
+            
             <div className="aspect-[4/5] overflow-hidden rounded-[1.4rem] bg-blue-100/10">
               <img
                 src={mePhoto}
@@ -81,7 +79,7 @@ export default function Hero() {
                 className="h-full w-full object-cover object-center"
               />
             </div>
-            <div className="mt-4 grid grid-cols-3 gap-3">
+            <div className="mt-2 grid grid-cols-2 gap-3">
               {highlights.map((item) => (
                 <div
                   key={item.label}
