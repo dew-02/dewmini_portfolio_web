@@ -8,7 +8,10 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import Achievements from "./components/Achievements";
+
 import "./App.css";
+
 
 export default function App() {
   return (
@@ -20,6 +23,8 @@ export default function App() {
         <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/achievements" element={<Achievements />} />
+        
       </Routes>
       <Footer />
     </Router>
