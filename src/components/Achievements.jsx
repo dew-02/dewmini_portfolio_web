@@ -4,12 +4,78 @@ import bgImage from "../assets/achievement-bg.jpg";
 import cert1 from "../assets/certificate1.jpg";
 import cert2 from "../assets/certificate2.jpg";
 import cert3 from "../assets/certificate3.jpg";
+import cert6 from "../assets/certificate6.jpg";
+import cert5 from "../assets/certificate5.jpg";
+import cert4 from "../assets/certificate4.jpg";
+import cert7 from "../assets/certificate7.jpg";
+
+
 
 const certificates = [
   {
+  title: "AI/ML Engineer – Stage 2",
+  organization: "SLIIT Centre for Open and Distance Education",
+  date: "2026",
+  image: cert7,
+  description:
+    "Successfully completed the AI/ML Engineer – Stage 2 programme, building on foundational AI and Machine Learning concepts through practical applications. The course covered supervised and unsupervised learning, model evaluation, feature engineering, and the implementation of machine learning algorithms using industry-standard tools and techniques.",
+  skills: [
+    "Machine Learning",
+    "Model Evaluation",
+    "Feature Engineering",
+    "Supervised Learning",
+    "Unsupervised Learning",
+  ],
+},
+  {
+  title: "Introduction to Data Science",
+  organization: "Cisco Networking Academy",
+  date: "2026",
+  image: cert4,
+  description:
+    "Successfully completed the Introduction to Data Science course offered by Cisco Networking Academy. The course provided a foundational understanding of data science concepts, data analysis, data visualization, and the role of data in solving real-world problems and supporting informed decision-making.",
+  skills: [
+    "Data Science",
+    "Data Analysis",
+    "Data Visualization",
+    "Data Literacy",
+  ],
+},
+
+
+  {
+  title: "Front-End Web Development",
+  organization: "University of Moratuwa",
+  date: "2026",
+  image: cert5,
+  description:
+    "Successfully completed the Front-End Web Development programme, gaining practical experience in building responsive and interactive websites using modern web technologies. The course covered webpage structure, styling, user interface design, and client-side scripting.",
+  skills: [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "Responsive Web Design",
+  ],
+},
+  {
+  title: "Web Design for Beginners",
+  organization: "University of Moratuwa",
+  date: "2026",
+  image: cert6,
+  description:
+    "Successfully completed the Web Design for Beginners programme, learning the fundamentals of creating responsive and visually appealing websites. The course covered HTML, CSS, JavaScript, webpage layouts, styling techniques, and basic web design principles.",
+  skills: [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "Web Design",
+  ],
+},
+  
+  {
     title: "Python for Beginners",
     organization:
-      "Centre for Open & Distance Learning (CODL), University of Moratuwa",
+      "University of Moratuwa",
     date: "June 2026",
     image: cert3,
     description:
